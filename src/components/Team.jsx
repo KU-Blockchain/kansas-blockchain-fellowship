@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
-import Person from "./Person"; // Make sure this import path is correct
+import TeamMember from "./TeamMember"; // Make sure this import path is correct
 import emma_headshot from "../images/team_headshots/emma.jpeg";
 import yash_headshot from "../images/team_headshots/yash.jpeg";
 import jahnvi_headshot from "../images/team_headshots/jahnvi.jpeg";
@@ -35,7 +35,7 @@ const Team = () => {
       </Heading>
       <SimpleGrid columns={[1, null, 3]} spacing={10}>
         {teamMembers.map((member, index) => (
-          <Person
+          <TeamMember
             key={index}
             headshot={member.headshot}
             name={member.name}

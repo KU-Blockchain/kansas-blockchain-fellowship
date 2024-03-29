@@ -4,8 +4,8 @@ import { Box, Text, Link, Image } from "@chakra-ui/react";
 function About() {
   return (
     <Box textAlign="center" py={10}>
-      <Text fontSize="xl" mt={5}>
-        The Kansas Blockchain Fellowship
+      <Text fontSize="xl" mt={5} fontWeight="bold">
+        Education, Mentorship, & Professional Development
       </Text>
       <Text mt={3}>
         a seven-week, experiential learning intensive, scholarship program, and

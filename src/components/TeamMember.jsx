@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Image, Text, SimpleGrid } from "@chakra-ui/react";
 
-const Person = ({ headshot, name, bio, moreImages }) => {
+const TeamMember = ({ headshot, name, title, bio, moreImages }) => {
   return (
     // Outer box serves as the gradient border
     <Box
-      p="2px" // This effectively becomes the border width
+      p="3px" // This effectively becomes the border width
       bgGradient="linear(to-r, blue.500, purple.500)"
       borderRadius="lg"
       m={5} // Margin to separate the cards a bit from each other or container edges
@@ -17,7 +17,7 @@ const Person = ({ headshot, name, bio, moreImages }) => {
         overflow="hidden"
         p={4}
         bg="white"
-        height={"396px"}
+        height={"393px"}
       >
         <Image
           src={headshot}
@@ -26,10 +26,13 @@ const Person = ({ headshot, name, bio, moreImages }) => {
           objectFit="cover"
           mx="auto"
         />
-        <Text mt={4} fontSize="xl" fontWeight="bold" textAlign="center">
+        <Text mt={2} fontSize="md" fontWeight="bold" textAlign="center">
           {name}
         </Text>
-        <Text mt={4} fontSize="sm" textAlign="center">
+        <Text mt={2} fontSize="md" fontWeight="bold" textAlign="center">
+          {title}
+        </Text>
+        <Text mt={2} fontSize="sm" textAlign="center">
           {bio}
         </Text>
         {moreImages && moreImages.length > 0 && (
@@ -49,4 +52,4 @@ const Person = ({ headshot, name, bio, moreImages }) => {
   );
 };
 
-export default Person;
+export default TeamMember;

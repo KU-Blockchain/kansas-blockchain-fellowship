@@ -6,9 +6,14 @@ const theme = extendTheme({
     body: '"Inconsolata", monospace', // Use for body text
   },
   fontSizes: {
-    md: "16px", // Default font size for body text
+    xs: "12px",
+    sm: "18px",
+    md: "24px", // Default font size for body text
     lg: "32px", // Approximately 2x larger than md
-    xl: "48px", // Approximately 3x larger than md
+    xl: "38px", // Approximately 3x larger than md
+    xxl: "48px",
+    xxxl: "64px",
+    xxxxl: "72px",
   },
   // You can also add styles globally to affect all text
   styles: {
