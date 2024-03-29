@@ -12,7 +12,13 @@ function About() {
         talent incubator to prepare students in Kansas for careers in blockchain
         and web3.{" "}
       </Text>
-      <Link href="https://chakra-ui.com" isExternal color="teal.500" mt={4}>
+      <Link
+        href="https://chakra-ui.com"
+        isExternal
+        color="teal.500"
+        fontSize="md"
+        mt={4}
+      >
         From the University of Kansas Blockchain Institute
       </Link>
     </Box>

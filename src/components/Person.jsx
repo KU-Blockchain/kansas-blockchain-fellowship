@@ -8,17 +8,16 @@ const Person = ({ headshot, name, bio, moreImages }) => {
       p="2px" // This effectively becomes the border width
       bgGradient="linear(to-r, blue.500, purple.500)"
       borderRadius="lg"
-      maxW="sm"
-      overflow="hidden"
       m={5} // Margin to separate the cards a bit from each other or container edges
+      height={"400px"}
     >
       {/* Inner box contains the card content */}
       <Box
-        borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
         p={4}
         bg="white"
+        height={"396px"}
       >
         <Image
           src={headshot}

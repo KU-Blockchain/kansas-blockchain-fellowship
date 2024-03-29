@@ -8,15 +8,15 @@ function Welcome() {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      bgGradient="linear(to-r, teal.300, blue.500)"
+      bgGradient="linear(to-r, teal.500, blue.400)"
       borderRadius="lg"
       m={2}
       p={4}
       minHeight="40vh"
     >
       <VStack spacing={4} align="start" w="50%">
-        <Text fontSize="2xl" color="whiteAlpha.900">
-          Welcome to Our Application
+        <Text fontSize="xl" mt={5} fontWeight="bold" color="white">
+          The Kansas Blockchain Fellowship
         </Text>
         <Text fontSize="lg" color="white">
           Get started by exploring features.
