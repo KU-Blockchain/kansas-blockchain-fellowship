@@ -27,7 +27,7 @@ const ThreeCircles = () => {
           wrap="wrap"
         >
           {circles.map((circle, index) => (
-            <AspectRatio key={index} ratio={1} width="30%">
+            <AspectRatio key={index} ratio={1} width="25%">
               <Box
                 bgGradient={circle.gradient}
                 borderRadius="full"
