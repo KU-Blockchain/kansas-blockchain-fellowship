@@ -15,7 +15,7 @@ const Footer = () => {
       </Text>
       <Link href="https://kublockchain.com/" isExternal>
         <Button colorScheme="blue" variant="outline" size="sm">
-          View Site
+          Learn More
         </Button>
       </Link>
     </Flex>
