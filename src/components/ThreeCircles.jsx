@@ -3,9 +3,21 @@ import { AspectRatio, Box, Flex, Text } from "@chakra-ui/react";
 
 const ThreeCircles = () => {
   const circles = [
-    { title: "Education", gradient: "linear(to-tr, #FFC1CC, #FF69B4)" },
-    { title: "Innovation", gradient: "linear(to-tl, #DA70D6, #9932CC)" },
-    { title: "Development", gradient: "linear(to-tr, #ADD8E6, #0000FF)" },
+    {
+      title: "Education",
+      gradient: "linear(to-tr, #FFC1CC, #FF69B4)",
+      borderColor: "blue.500",
+    },
+    {
+      title: "Innovation",
+      gradient: "linear(to-tl, #DA70D6, #9932CC)",
+      borderColor: "pink.500",
+    },
+    {
+      title: "Development",
+      gradient: "linear(to-tr, #ADD8E6, #0000FF)",
+      borderColor: "purple.500",
+    },
   ];
 
   return (
@@ -35,6 +47,9 @@ const ThreeCircles = () => {
                 alignItems="center"
                 justifyContent="center"
                 boxShadow="xl"
+                // Add a semi-thick black border around each circle
+                border="5px solid " // Adjust the thickness as needed
+                borderColor={circle.borderColor}
               >
                 <Text
                   color="white"
