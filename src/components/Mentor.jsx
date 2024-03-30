@@ -1,14 +1,14 @@
 import React from "react";
 import { Box, Image, Text, SimpleGrid } from "@chakra-ui/react";
 
-const Mentor = ({ headshot, name, title, bio, moreImages }) => {
+const Mentor = ({ headshot, name, company_logo, title, bio, moreImages }) => {
   return (
     // Outer box serves as the gradient border
     <Box
-      p="3px" // This effectively becomes the border width
+      p="2px" // This effectively becomes the border width
       bgGradient="linear(to-r, purple.500, pink.300)"
       borderRadius="lg"
-      m={5} // Margin to separate the cards a bit from each other or container edges
+      m={3}
       height={"500px"}
     >
       {/* Inner box contains the card content */}
@@ -26,9 +26,16 @@ const Mentor = ({ headshot, name, title, bio, moreImages }) => {
           objectFit="cover"
           mx="auto"
         />
+        <Image
+          src={company_logo}
+          borderRadius="full"
+          boxSize="70px"
+          objectFit="cover"
+          mx="auto"
+        />
         <Text
           mt={2}
-          fontSize="md"
+          fontSize="lg"
           fontWeight="bold"
           textAlign="center"
           textColor={"black"}
@@ -37,7 +44,7 @@ const Mentor = ({ headshot, name, title, bio, moreImages }) => {
         </Text>
         <Text
           mt={2}
-          fontSize="md"
+          fontSize="sm"
           fontWeight="bold"
           textAlign="center"
           textColor={"black"}
@@ -55,6 +62,8 @@ const Mentor = ({ headshot, name, title, bio, moreImages }) => {
                 src={image}
                 boxSize="100px"
                 objectFit="cover"
+                mx="auto"
+                borderRadius="full"
               />
             ))}
           </SimpleGrid>
