@@ -29,23 +29,32 @@ function ApplicationInfo() {
         <Text mt={3} fontSize="md">
           We are looking for candidates who:
         </Text>
-        <UnorderedList mt={2} ml={5} fontSize="sm">
+        <UnorderedList mt={2} ml={5} fontSize="md">
           {listItems.map((item, index) => (
             <ListItem key={index}>{item}</ListItem>
           ))}
         </UnorderedList>
-        <Link href="https://kublockchain.com/" isExternal>
-          <Button colorScheme="blue" variant="outline" size="md" mt={4}>
-            Apply Here
-          </Button>
-        </Link>
+        <Text mt={3} fontSize="md" fontWeight="bold">
+          Applications close April 21, 2024 at 11:59 PM CST.
+        </Text>
+        <Flex justifyContent="center" mt={4}>
+          {" "}
+          <Link href="https://kublockchain.com/" isExternal>
+            <Button colorScheme="blue" variant="outline" size="md">
+              Apply Here
+            </Button>
+          </Link>
+        </Flex>
       </Box>
       <Box flex="1" px={5}>
+        {/* Add a black border around the image */}
         <Image
           src={working_together}
           alt="Working Together"
           objectFit="cover"
-          borderRadius="md"
+          borderRadius="xl"
+          border="2px"
+          borderColor="black"
         />
       </Box>
     </Flex>
