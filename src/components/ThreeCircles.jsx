@@ -3,21 +3,9 @@ import { AspectRatio, Box, Flex, Text } from "@chakra-ui/react";
 
 const ThreeCircles = () => {
   const circles = [
-    {
-      title: "Education",
-      gradient: "linear(to-tr, #FFC1CC, #FF69B4)",
-      borderColor: "blue.500",
-    },
-    {
-      title: "Innovation",
-      gradient: "linear(to-tl, #DA70D6, #9932CC)",
-      borderColor: "pink.500",
-    },
-    {
-      title: "Development",
-      gradient: "linear(to-tr, #ADD8E6, #0000FF)",
-      borderColor: "purple.500",
-    },
+    { title: "Education", gradient: "linear(to-tr, #FFC1CC, #FF69B4)" },
+    { title: "Innovation", gradient: "linear(to-tl, #DA70D6, #9932CC)" },
+    { title: "Development", gradient: "linear(to-tr, #ADD8E6, #0000FF)" },
   ];
 
   return (
@@ -33,13 +21,17 @@ const ThreeCircles = () => {
           Program Pillars
         </Text>
         <Flex
-          justifyContent="space-around"
+          direction={{ base: "column", md: "row" }} // Stacks vertically on small screens, horizontally on medium and up
+          justifyContent="center"
           alignItems="center"
-          width="100%"
-          wrap="wrap"
+          gap="4" // Adds space between items regardless of the direction
         >
           {circles.map((circle, index) => (
-            <AspectRatio key={index} ratio={1} width="25%">
+            <AspectRatio
+              key={index}
+              ratio={1}
+              width={{ base: "80%", md: "25%" }}
+            >
               <Box
                 bgGradient={circle.gradient}
                 borderRadius="full"
@@ -47,9 +39,7 @@ const ThreeCircles = () => {
                 alignItems="center"
                 justifyContent="center"
                 boxShadow="xl"
-                // Add a semi-thick black border around each circle
-                border="5px solid " // Adjust the thickness as needed
-                borderColor={circle.borderColor}
+                border="4px solid black" // Example border
               >
                 <Text
                   color="white"

@@ -8,9 +8,9 @@ function About() {
         Education, Mentorship, & Professional Development
       </Text>
       <Text mt={3} mx={8}>
-        a seven-week, experiential learning intensive, scholarship program, and
-        talent incubator to prepare students in Kansas for careers in blockchain
-        and web3.{" "}
+        This program is designed to give exceptional students in the Midwest
+        deep knowledge and experience around blockchain, digital assets, and
+        web3 to prepare them for careers in the industry.
       </Text>
       <Link
         href="https://kublockchain.com/"
@@ -18,7 +18,7 @@ function About() {
         color="teal.500"
         fontSize="md"
         mt={4}
-        mx={4} // Add the same margin to the Link if desired
+        mx={4}
       >
         From the University of Kansas Blockchain Institute
       </Link>

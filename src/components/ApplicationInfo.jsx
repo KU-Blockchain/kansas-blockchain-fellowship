@@ -9,7 +9,7 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import working_together from "../images/working_together.jpeg";
+import working_together from "../images/working_together.jpeg"; // Ensure this path is correct
 
 function ApplicationInfo() {
   const listItems = [
@@ -21,8 +21,14 @@ function ApplicationInfo() {
   ];
 
   return (
-    <Flex align="center" justify="center" py={10}>
-      <Box flex="1" textAlign="left" px={5}>
+    <Flex
+      direction={{ base: "column", md: "row" }} // Stacks the children vertically on small screens
+      align="center"
+      justify="center"
+      py={10}
+      gap={5} // Adds gap between items
+    >
+      <Box textAlign="left" px={5} width={{ base: "100%", md: "50%" }}>
         <Text fontSize="xl" mt={5} fontWeight="bold">
           Eligibility
         </Text>
@@ -38,7 +44,6 @@ function ApplicationInfo() {
           Applications close April 21, 2024 at 11:59 PM CST.
         </Text>
         <Flex justifyContent="center" mt={4}>
-          {" "}
           <Link href="https://kublockchain.com/" isExternal>
             <Button colorScheme="blue" variant="outline" size="md">
               Apply Here
@@ -46,8 +51,10 @@ function ApplicationInfo() {
           </Link>
         </Flex>
       </Box>
-      <Box flex="1" px={5}>
-        {/* Add a black border around the image */}
+      <Box
+        px={5}
+        width={{ base: "100%", md: "50%" }} // Takes full width on small screens
+      >
         <Image
           src={working_together}
           alt="Working Together"
@@ -55,6 +62,7 @@ function ApplicationInfo() {
           borderRadius="xl"
           border="2px"
           borderColor="black"
+          width="100%" // Ensures the image is responsive
         />
       </Box>
     </Flex>
