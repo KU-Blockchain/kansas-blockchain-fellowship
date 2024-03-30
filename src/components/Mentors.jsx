@@ -1,12 +1,32 @@
-import React from "react";
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
-import Mentor from "./Mentor"; // Make sure this import path is correct
+import React, { useState } from "react";
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  VStack,
+  Image,
+  Text,
+} from "@chakra-ui/react";
+import Mentor from "./Mentor";
 import joe_headshot from "../images/mentor_headshots/joe_roets.png";
 import daniel_headshot from "../images/mentor_headshots/daniel_jones.jpeg";
 import perry_headshot from "../images/mentor_headshots/perry_alexander.jpeg";
 
 const Mentors = () => {
-  const teamMembers = [
+  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleMentorClick = (mentor) => {
+    setSelectedMentor(mentor);
+    setIsModalOpen(true);
+  };
+
+  const mentors = [
     {
       headshot: joe_headshot,
       title: "Chief Architect & Founder Dragonchain",
@@ -33,17 +53,50 @@ const Mentors = () => {
         Mentors
       </Heading>
       <SimpleGrid columns={[1, null, 3]} spacing={10}>
-        {teamMembers.map((member, index) => (
-          <Mentor
+        {mentors.map((mentor, index) => (
+          <Box
             key={index}
-            headshot={member.headshot}
-            name={member.name}
-            title={member.title}
-            bio={member.bio}
-            moreImages={member.moreImages}
-          />
+            onClick={() => handleMentorClick(mentor)}
+            cursor="pointer"
+          >
+            <Mentor
+              headshot={mentor.headshot}
+              name={mentor.name}
+              title={mentor.title}
+              bio={mentor.bio}
+            />
+          </Box>
         ))}
       </SimpleGrid>
+      {/* Modal */}
+      {selectedMentor && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          size="4xl"
+        >
+          <ModalOverlay />
+          <ModalContent m={4} borderRadius="xl">
+            <ModalHeader textAlign="center">{selectedMentor.name}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={6}>
+              <VStack spacing={4} align="center">
+                <Image
+                  src={selectedMentor.headshot}
+                  borderRadius="full"
+                  boxSize="150px"
+                />
+                <Text fontSize="2xl" fontWeight="bold">
+                  {selectedMentor.title}
+                </Text>
+                <Text fontSize="md" textAlign="center">
+                  {selectedMentor.bio}
+                </Text>
+              </VStack>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      )}
     </Box>
   );
 };
