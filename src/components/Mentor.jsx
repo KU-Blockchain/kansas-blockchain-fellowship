@@ -26,13 +26,25 @@ const Mentor = ({ headshot, name, title, bio, moreImages }) => {
           objectFit="cover"
           mx="auto"
         />
-        <Text mt={2} fontSize="md" fontWeight="bold" textAlign="center">
+        <Text
+          mt={2}
+          fontSize="md"
+          fontWeight="bold"
+          textAlign="center"
+          textColor={"black"}
+        >
           {name}
         </Text>
-        <Text mt={2} fontSize="md" fontWeight="bold" textAlign="center">
+        <Text
+          mt={2}
+          fontSize="md"
+          fontWeight="bold"
+          textAlign="center"
+          textColor={"black"}
+        >
           {title}
         </Text>
-        <Text mt={2} fontSize="sm" textAlign="center">
+        <Text mt={2} fontSize="sm" textAlign="center" textColor={"black"}>
           {bio}
         </Text>
         {moreImages && moreImages.length > 0 && (

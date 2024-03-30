@@ -1,6 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+  config: {
+    initialColorMode: "dark", // Set the initial color mode to dark
+    useSystemColorMode: false, // If you want to disable color mode switching based on system settings
+  },
   fonts: {
     heading: '"Inconsolata", monospace', // Use for headings
     body: '"Inconsolata", monospace', // Use for body text
@@ -15,17 +19,16 @@ const theme = extendTheme({
     xxxl: "64px",
     xxxxl: "72px",
   },
-  // You can also add styles globally to affect all text
   styles: {
-    global: {
+    global: (props) => ({
       body: {
         fontSize: "lg", // Now using 'lg' size for body text
+        color: props.colorMode === "dark" ? "white" : "gray.800",
+        bg: props.colorMode === "dark" ? "black" : "white",
       },
-      // Customizing headings globally might require targeting specific components or using component styles
-    },
+    }),
   },
   components: {
-    // Example of targeting all Heading components
     Heading: {
       baseStyle: {
         fontSize: "xl", // Now using 'xl' for all headings by default
