@@ -61,7 +61,7 @@ const Mentors = () => {
   return (
     <Box>
       <Heading as="h2" size="xl" textAlign="center" my={5}>
-        Mentors
+        Our Mentors
       </Heading>
       <SimpleGrid columns={[1, null, 3]} spacing={10}>
         {mentors.map((mentor, index) => (

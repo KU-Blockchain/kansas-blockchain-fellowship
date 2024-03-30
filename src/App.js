@@ -6,6 +6,8 @@ import Team from "./components/Team";
 import Mentors from "./components/Mentors";
 import ColorModeSwitcher from "./components/ColorModeSwitcher";
 import WindmillImage from "./components/WindmillImage";
+import ThreeCircles from "./components/ThreeCircles";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       <ColorModeSwitcher />
       <Welcome />
       <About />
+      <ThreeCircles />
       <Team />
       <WindmillImage />
       <Mentors />
+      <Footer />
     </Box>
   );
 }
