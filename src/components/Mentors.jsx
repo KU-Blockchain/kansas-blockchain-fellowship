@@ -17,12 +17,15 @@ import Mentor from "./Mentor";
 import joe_headshot from "../images/mentor_headshots/joe_roets.png";
 import daniel_headshot from "../images/mentor_headshots/daniel_jones.jpeg";
 import perry_headshot from "../images/mentor_headshots/perry_alexander.jpeg";
+import kevin_headshot from "../images/mentor_headshots/kevin_galler.jpeg";
+
 import i2s from "../images/logos/i2s.png";
 import dragonChain from "../images/logos/dragonchain.png";
 import sams_club from "../images/logos/sams_club.png";
 import disney from "../images/logos/disney.png";
 import uniswp from "../images/logos/uniswap.png";
 import pinata from "../images/logos/pinata.png";
+import monad from "../images/logos/monad.jpeg";
 
 const Mentors = () => {
   const [selectedMentor, setSelectedMentor] = useState(null);
@@ -55,6 +58,13 @@ const Mentors = () => {
       title: "Distinguished Professor at The University of Kansas",
       company_logo: i2s,
       bio: "AT&T Foundation Distinguished Professor and ITTC Director at The University of Kansas. Research and teaching interests include formal methods, remote attestation, program verification and synthesis, and languages. Currenting working on frameworks for establishing trust in remote systems. Still looking for my turntable remote.",
+    },
+    {
+      headshot: kevin_headshot,
+      name: "Kevin Galler",
+      title: "Developer Relations Engineer at Monad Labs",
+      company_logo: monad,
+      bio: "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer (Interactive Media Group) at Apple. \nBS / MS Graduate of Computer Engineering / Electrical and Computer Engineering at Purdue University (Indianapolis Campus) 2013-2017. \nSpecialization in Computer Engineering and Signal Processing (both specialization requirements satisfied).",
     },
   ];
 

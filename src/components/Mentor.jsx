@@ -25,6 +25,7 @@ const Mentor = ({ headshot, name, company_logo, title, bio, moreImages }) => {
           boxSize="150px"
           objectFit="cover"
           mx="auto"
+          paddingBottom="8px"
         />
         <Image
           src={company_logo}
