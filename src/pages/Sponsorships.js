@@ -1,29 +1,72 @@
 import React from "react";
-import { Flex, Box, Image, Heading, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Image,
+  Heading,
+  Text,
+  VStack,
+  Link,
+} from "@chakra-ui/react";
 import learning from "../images/learning.jpeg";
 
 function Sponsorships() {
   return (
-    <Flex height="100vh" align="center" justify="center">
-      <Box width="50%" height="50%">
-        <Image
-          src={learning} // Replace with the path to your image
-          alt="Sponsorships"
-          objectFit="cover"
-          width="100%"
-          height="100%"
-        />
-      </Box>
-      <Flex width="50%" height="50%" direction="column" paddingLeft="5">
-        <Heading as="h1" size="xl">
-          Sponsorships
-        </Heading>
-        <Text fontSize="lg" mt="3">
-          Explore sponsorship opportunities and become a partner.
-        </Text>
-        {/* You can add more text or elements here as needed */}
+    <VStack spacing={10} align="stretch">
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        align="center"
+        justify="center"
+        padding={5}
+      >
+        <Box flex={1}>
+          <Image
+            src={learning} // Replace with the path to your image
+            alt="Sponsorships"
+            objectFit="cover"
+            width="100%"
+            height={{ base: "50vh", md: "100%" }} // Adjust height responsively
+            borderRadius="md" // Optional: if you want rounded corners
+          />
+        </Box>
+        <Flex
+          flex={1}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          padding={5}
+        >
+          <Heading as="h1" size="xl" textAlign="center">
+            Sponsorships
+          </Heading>
+          <Text fontSize="lg" mt={3} textAlign="center">
+            Sponsorships support student scholarships and ensure the program is
+            accessible to all students. We are still seeking partnerships for
+            the 2024 program.
+          </Text>
+        </Flex>
       </Flex>
-    </Flex>
+      <Flex direction="column" align="center" justify="center" padding={5}>
+        <Heading as="h2" size="lg" textAlign="center">
+          Interested in partnering with us?
+        </Heading>
+        <Text fontSize="md" mt={3} textAlign="center">
+          Contact us at{" "}
+          <Link
+            href="mailto:kansasblockchainfellowship@gmail.com"
+            color="green.500"
+            isExternal
+            textDecoration="underline"
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
+            kansasblockchainfellowship@gmail.com
+          </Link>
+          .
+        </Text>
+      </Flex>
+    </VStack>
   );
 }
 
