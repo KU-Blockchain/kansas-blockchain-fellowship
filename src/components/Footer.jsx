@@ -10,7 +10,7 @@ const Footer = () => {
       marginTop="8"
       padding="8"
     >
-      <Text fontSize="md" marginBottom="2">
+      <Text fontSize="sm" marginBottom="2">
         Made with 🔥 by the University of Kansas Blockchain Institute
       </Text>
       <Link href="https://kublockchain.com/" isExternal>
