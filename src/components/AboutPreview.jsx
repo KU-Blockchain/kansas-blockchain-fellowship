@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text, Link } from "@chakra-ui/react";
 
-function About() {
+function AboutPreview() {
   return (
     <Box textAlign="center" py={10}>
       <Text fontSize="xl" mt={5} fontWeight="bold" mx={6}>
@@ -26,4 +26,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutPreview;
