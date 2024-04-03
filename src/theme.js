@@ -35,6 +35,16 @@ const theme = extendTheme({
         fontWeight: "900",
       },
     },
+    Popover: {
+      parts: ["content"], // Specify the part of the Popover you want to style
+      baseStyle: {
+        content: {
+          bg: "linear-gradient(to-r, pink.500, orange.500)",
+          borderColor: "orange.500",
+          _focus: { boxShadow: "lg" },
+        },
+      },
+    },
     // You can add customizations for other components here as needed
   },
 });

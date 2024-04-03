@@ -11,24 +11,35 @@ import {
   PopoverCloseButton,
   PopoverBody,
   Button,
+  VStack, // Added for vertical stacking
 } from "@chakra-ui/react";
 
 const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
   return (
     <Box
+      position="relative" // Make the parent position relative
       p="4px"
       bgGradient="linear(to-r, pink.500, orange.500)"
       borderRadius="lg"
+      borderWidth={3}
       m={5}
       height="400px"
     >
       <Box
-        borderRadius="lg"
-        overflow="hidden"
-        p={4}
+        position="absolute" // Positioned absolutely to fill the area
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
         bg="white"
-        opacity={0.7}
-        height="393px"
+        opacity={0.7} // Only apply opacity to this background layer
+        borderRadius="lg"
+      />
+      <VStack // Use VStack for vertical alignment without affecting opacity
+        spacing={4}
+        p={4}
+        position="relative" // Ensure it's above the background
+        zIndex={1} // Higher than the background
       >
         <Image
           src={headshot}
@@ -64,10 +75,20 @@ const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
               </Text>
             </Box>
           </PopoverTrigger>
-          <PopoverContent>
-            <PopoverArrow />
-            <PopoverCloseButton />
-            <PopoverBody>
+          <PopoverContent
+            color="white"
+            bg="pink.500" // Adjust the background color to match the card's theme
+            borderColor="orange.500" // Border color to match or complement the card
+            borderWidth="1px" // Optional: add a border
+            borderRadius="lg" // Rounded corners like the card
+            boxShadow="lg" // Add some shadow for depth, similar to the card
+            p={4} // Padding inside the popover, adjust as needed
+          >
+            <PopoverArrow bg="pink.500" />
+            <PopoverCloseButton color="white" />
+            <PopoverBody
+              color="white" // Adjust text color to contrast with the background
+            >
               {longBio || "More detailed bio not available."}
             </PopoverBody>
           </PopoverContent>
@@ -84,7 +105,7 @@ const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
             ))}
           </SimpleGrid>
         )}
-      </Box>
+      </VStack>
     </Box>
   );
 };

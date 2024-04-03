@@ -11,7 +11,7 @@ const Mentor = ({ headshot, name, company_logo, title, bio, moreImages }) => {
       m={3}
       height={"500px"}
     >
-      {/* Inner box contains the card content */}
+    
       <Box
         borderRadius="lg"
         overflow="hidden"

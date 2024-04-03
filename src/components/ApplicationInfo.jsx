@@ -13,7 +13,7 @@ import working_together from "../images/working_together.jpeg"; // Ensure this p
 
 function ApplicationInfo() {
   const listItems = [
-    "are currently pursuing a bachelor's degree at University of Kansas, Kansas State University, Washburn University, or UMKC",
+    "are currently pursuing a bachelor's degree at an accredited university in Kansas or within a driveable distance from Lawrence, KS",
     "are interested in blockchain, crypto, web3, or principles of decentralization",
     "think outside the box and ask good questions",
     "have demonstrated academic excellence in their field of study",

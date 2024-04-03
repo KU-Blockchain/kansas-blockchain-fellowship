@@ -16,6 +16,12 @@ const faqData = [
       "The fellowship is primarily for students within a driving distance of the University of Kansas. However, hybrid or remote participation may be available for exceptional candidates.",
   },
   {
+    question:
+      "Is the fellowship only for students at the University of Kansas?",
+    answer:
+      "No! We are seeking candidates from all neighboring universities as well, including K-State, Washburn, JCCC, UMKC, and Haskell.",
+  },
+  {
     question: "Is food provided?",
     answer: "Meals will be provided for all in person fellows at every class.",
   },
