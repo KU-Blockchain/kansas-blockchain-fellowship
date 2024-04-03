@@ -27,14 +27,14 @@ const Team = () => {
     {
       headshot: emma_headshot,
       title: "Program Director",
-      name: "Emma",
+      name: "Emma Nasseri",
       bio: "Emma is a final year Honors Computer Science and Visual Arts student. She is President of the KU Blockchain Institute.",
       longBio:
         "Emma is a final year Honors Computer Science and Visual Arts student. She is President of the KU Blockchain Institute.",
     },
     {
       headshot: jahnvi_headshot,
-      name: "Jahnvi",
+      name: "Jahnvi Maddila",
       title: "Director of Education",
       bio: "Jahnvi is a sophomore in the Honors Program studying Computer Science. She is Director of Communications for the KU Blockchain Institute.",
       longBio:
@@ -42,7 +42,7 @@ const Team = () => {
     },
     {
       headshot: yash_headshot,
-      name: "Yash",
+      name: "Yash Prajapati",
       title: "Head of Partnerships",
       bio: "Yash is a sophomore in the Honors Program studying Applied Computing and Mathematics. He is the VP of Finance for the KU Blockchain Institute.",
       longBio:

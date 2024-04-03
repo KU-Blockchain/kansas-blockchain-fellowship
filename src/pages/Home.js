@@ -8,7 +8,7 @@ import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import WindmillImage from "../components/WindmillImage";
 import ThreeCircles from "../components/ThreeCircles";
 import Footer from "../components/Footer";
-import ApplicationInfo from "../components/ApplicationInfo";
+import Eligibility from "../components/Eligibility";
 
 function Home() {
   return (
@@ -20,7 +20,7 @@ function Home() {
       <Team />
       <Mentors />
       <WindmillImage />
-      <ApplicationInfo />
+      <Eligibility />
       <Footer />
     </Box>
   );

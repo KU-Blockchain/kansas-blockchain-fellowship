@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import working_together from "../images/working_together.jpeg"; // Ensure this path is correct
 
-function ApplicationInfo() {
+function Eligibility() {
   const listItems = [
     "are currently pursuing a bachelor's degree at an accredited university in Kansas or within a driveable distance from Lawrence, KS",
     "are interested in blockchain, crypto, web3, or principles of decentralization",
@@ -22,11 +22,11 @@ function ApplicationInfo() {
 
   return (
     <Flex
-      direction={{ base: "column", md: "row" }} // Stacks the children vertically on small screens
+      direction={{ base: "column", md: "row" }}
       align="center"
       justify="center"
       py={10}
-      gap={5} // Adds gap between items
+      gap={5}
     >
       <Box textAlign="left" px={5} width={{ base: "100%", md: "50%" }}>
         <Text fontSize="xl" mt={5} fontWeight="bold">
@@ -69,4 +69,4 @@ function ApplicationInfo() {
   );
 }
 
-export default ApplicationInfo;
+export default Eligibility;
