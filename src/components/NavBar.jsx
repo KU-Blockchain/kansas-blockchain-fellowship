@@ -6,7 +6,7 @@ import logo from "../images/logo.png";
 function Navbar() {
   const linkStyle = {
     marginRight: "5",
-    padding: "8px 16px",
+    padding: "6px 14px",
     borderRadius: "md",
     border: "2px solid white",
     backgroundColor: "rgba(255, 255, 255, 0.2)",
@@ -23,7 +23,7 @@ function Navbar() {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="1.5rem"
+      padding="1rem"
       bgGradient="linear(to-r, orange.500, pink.500)"
       color="white"
     >
@@ -32,6 +32,7 @@ function Navbar() {
           <Image
             src={logo}
             boxSize="50px" // Set the size of your logo
+            pb="4px"
             marginRight="12px"
           />
         </ChakraLink>
