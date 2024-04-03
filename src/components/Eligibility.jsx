@@ -44,7 +44,7 @@ function Eligibility() {
           Applications close April 21, 2024 at 11:59 PM CST.
         </Text>
         <Flex justifyContent="center" mt={4}>
-          <Link href="https://kublockchain.com/" isExternal>
+          <Link href="https://forms.gle/Ej9kwQueqKgPjgJp6" isExternal>
             <Button colorScheme="pink" variant="outline" size="md">
               Apply Here
             </Button>

@@ -1,88 +1,62 @@
 import React from "react";
-import {
-  Box,
-  Image,
-  Text,
-  SimpleGrid,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverBody,
-  Button,
-  VStack, // Added for vertical stacking
-} from "@chakra-ui/react";
+import { Box, Image, Text, VStack } from "@chakra-ui/react";
 
-const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
+const TeamMember = ({ headshot, name, title, bio }) => {
   return (
     <Box
-      position="relative" // Make the parent position relative
+      position="relative"
       p="4px"
       bgGradient="linear(to-r, pink.500, orange.500)"
       borderRadius="lg"
       borderWidth={3}
       m={5}
-      height="400px"
+      overflow="hidden" // Prevents content from spilling outside the box
     >
       <Box
-        position="absolute" // Positioned absolutely to fill the area
+        position="absolute"
         top={0}
         left={0}
         right={0}
         bottom={0}
         bg="white"
-        opacity={0.7} // Only apply opacity to this background layer
+        opacity={0.7}
         borderRadius="lg"
       />
-      <VStack // Use VStack for vertical alignment without affecting opacity
-        spacing={4}
-        p={4}
-        position="relative" // Ensure it's above the background
-        zIndex={1} // Higher than the background
-      >
+      <VStack spacing={4} p={4} position="relative" zIndex={1} align="stretch">
         <Image
           src={headshot}
           borderRadius="full"
-          boxSize="150px"
+          boxSize={["75px", "100px", "150px"]} // Responsive image size
           objectFit="cover"
           mx="auto"
         />
         <Text
-          mt={2}
-          fontSize="lg"
+          fontSize={["sm", "md", "lg"]} // Responsive font sizes
           fontWeight="bold"
           textAlign="center"
           textColor="black"
+          noOfLines={1} // Ensures text doesn't wrap
         >
           {name}
         </Text>
         <Text
-          fontSize="sm"
+          fontSize={["xs", "sm", "md"]} // Responsive font sizes
           fontWeight="bold"
           textAlign="center"
           textColor="black"
+          noOfLines={1} // Ensures text doesn't wrap
         >
           {title}
         </Text>
-        {
-          <Text fontSize="sm" textAlign="center" textColor="black">
-            {bio}
-          </Text>
-        }
-
-        {/* {moreImages && moreImages.length > 0 && (
-          <SimpleGrid columns={moreImages.length} spacing={5} mt={4}>
-            {moreImages.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                boxSize="100px"
-                objectFit="cover"
-              />
-            ))}
-          </SimpleGrid>
-        )} */}
+        <Text
+          fontSize={["xs", "sm"]} // Responsive font sizes
+          textAlign="center"
+          textColor="black"
+          overflow="hidden" // Adds hidden overflow
+          wordWrap="break-word" // Ensures long words don't spill out
+        >
+          {bio}
+        </Text>
       </VStack>
     </Box>
   );
