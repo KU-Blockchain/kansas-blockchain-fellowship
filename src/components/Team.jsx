@@ -76,24 +76,25 @@ const Team = () => {
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          size="full"
+          size="3xl"
         >
           <ModalOverlay />
-          <ModalContent m={20} borderRadius="2xl">
+          <ModalContent m={2} borderRadius="xl">
             <ModalHeader textAlign="center">{selectedMember.name}</ModalHeader>
             <ModalCloseButton />
-            <ModalBody>
-              <VStack spacing={4}>
+            <ModalBody pb={6}>
+              <VStack spacing={4} align="center">
                 <Image
                   src={selectedMember.headshot}
-                  boxSize="300px"
+                  width="200px"
                   borderRadius="full"
                 />
-                <Text fontSize="xl" fontWeight="bold">
+                <Text fontSize="2xl" fontWeight="bold">
                   {selectedMember.title}
                 </Text>
-                <Text fontSize="md">{selectedMember.longBio}</Text>
-                {/* Include moreImages or any additional details here */}
+                <Text fontSize="md" textAlign="center">
+                  {selectedMember.longBio}
+                </Text>
               </VStack>
             </ModalBody>
           </ModalContent>

@@ -48,52 +48,30 @@ const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
           objectFit="cover"
           mx="auto"
         />
-        <Popover>
-          <PopoverTrigger>
-            <Box>
-              <Text
-                mt={2}
-                fontSize="md"
-                fontWeight="bold"
-                textAlign="center"
-                textColor="black"
-                cursor="pointer"
-              >
-                {name}
-              </Text>
-              <Text
-                mt={2}
-                fontSize="md"
-                fontWeight="bold"
-                textAlign="center"
-                textColor="black"
-              >
-                {title}
-              </Text>
-              <Text mt={2} fontSize="sm" textAlign="center" textColor="black">
-                {bio}
-              </Text>
-            </Box>
-          </PopoverTrigger>
-          <PopoverContent
-            color="white"
-            bg="pink.500" // Adjust the background color to match the card's theme
-            borderColor="orange.500" // Border color to match or complement the card
-            borderWidth="1px" // Optional: add a border
-            borderRadius="lg" // Rounded corners like the card
-            boxShadow="lg" // Add some shadow for depth, similar to the card
-            p={4} // Padding inside the popover, adjust as needed
-          >
-            <PopoverArrow bg="pink.500" />
-            <PopoverCloseButton color="white" />
-            <PopoverBody
-              color="white" // Adjust text color to contrast with the background
-            >
-              {longBio || "More detailed bio not available."}
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
-        {moreImages && moreImages.length > 0 && (
+        <Text
+          mt={2}
+          fontSize="lg"
+          fontWeight="bold"
+          textAlign="center"
+          textColor="black"
+        >
+          {name}
+        </Text>
+        <Text
+          fontSize="sm"
+          fontWeight="bold"
+          textAlign="center"
+          textColor="black"
+        >
+          {title}
+        </Text>
+        {
+          <Text fontSize="sm" textAlign="center" textColor="black">
+            {bio}
+          </Text>
+        }
+
+        {/* {moreImages && moreImages.length > 0 && (
           <SimpleGrid columns={moreImages.length} spacing={5} mt={4}>
             {moreImages.map((image, index) => (
               <Image
@@ -104,7 +82,7 @@ const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
               />
             ))}
           </SimpleGrid>
-        )}
+        )} */}
       </VStack>
     </Box>
   );
