@@ -15,8 +15,8 @@ function AboutPreview() {
       <Link
         href="https://kublockchain.com/"
         isExternal
-        color="teal.500"
-        fontSize="md"
+        color="orange.500"
+        fontSize="lg"
         mt={4}
         mx={4}
       >

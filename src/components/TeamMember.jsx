@@ -16,13 +16,20 @@ import {
 const TeamMember = ({ headshot, name, title, bio, moreImages, longBio }) => {
   return (
     <Box
-      p="3px"
-      bgGradient="linear(to-r, blue.500, purple.500)"
+      p="4px"
+      bgGradient="linear(to-r, pink.500, orange.500)"
       borderRadius="lg"
       m={5}
       height="400px"
     >
-      <Box borderRadius="lg" overflow="hidden" p={4} bg="white" height="393px">
+      <Box
+        borderRadius="lg"
+        overflow="hidden"
+        p={4}
+        bg="white"
+        opacity={0.7}
+        height="393px"
+      >
         <Image
           src={headshot}
           borderRadius="full"

@@ -3,9 +3,9 @@ import { AspectRatio, Box, Flex, Text } from "@chakra-ui/react";
 
 const ThreeCircles = () => {
   const circles = [
-    { title: "Education", gradient: "linear(to-tr, #FFC1CC, #FF69B4)" },
-    { title: "Innovation", gradient: "linear(to-tl, #DA70D6, #9932CC)" },
-    { title: "Development", gradient: "linear(to-tr, #ADD8E6, #0000FF)" },
+    { title: "Education", gradient: "linear(to-tr, pink.300, orange.600)" },
+    { title: "Innovation", gradient: "linear(to-tr, orange.300, pink.600)" },
+    { title: "Development", gradient: "linear(to-tr, pink.600, yellow.600)" },
   ];
 
   return (

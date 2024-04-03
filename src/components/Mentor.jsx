@@ -5,8 +5,8 @@ const Mentor = ({ headshot, name, company_logo, title, bio, moreImages }) => {
   return (
     // Outer box serves as the gradient border
     <Box
-      p="2px" // This effectively becomes the border width
-      bgGradient="linear(to-r, purple.500, pink.300)"
+      p="3px" // This effectively becomes the border width
+      bgGradient="linear(to-r, orange.500, pink.300)"
       borderRadius="lg"
       m={3}
       height={"500px"}

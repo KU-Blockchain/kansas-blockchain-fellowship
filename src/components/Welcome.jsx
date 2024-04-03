@@ -8,13 +8,13 @@ function Welcome() {
       display={{ base: "block", md: "flex" }} // Switches to block layout on base, flex on medium screens and up
       justifyContent="space-between"
       alignItems="center"
-      bgGradient="linear(to-r, teal.200, blue.400)"
+      bgGradient="linear(to-r, yellow.200, orange.400)"
       borderRadius="lg"
       m={{ base: 4, md: 12 }} // Less margin on smaller screens
       p={4}
       minHeight="40vh"
-      borderWidth="5px"
-      borderColor="purple.500"
+      borderWidth="6px"
+      borderColor="orange.600"
     >
       <VStack spacing={4} align="start" w={{ base: "100%", md: "70%" }}>
         <Text

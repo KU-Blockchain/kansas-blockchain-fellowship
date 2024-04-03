@@ -45,7 +45,7 @@ function ApplicationInfo() {
         </Text>
         <Flex justifyContent="center" mt={4}>
           <Link href="https://kublockchain.com/" isExternal>
-            <Button colorScheme="blue" variant="outline" size="md">
+            <Button colorScheme="pink" variant="outline" size="md">
               Apply Here
             </Button>
           </Link>

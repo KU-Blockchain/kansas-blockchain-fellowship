@@ -14,7 +14,7 @@ const Footer = () => {
         Made with 🔥 by the University of Kansas Blockchain Institute
       </Text>
       <Link href="https://kublockchain.com/" isExternal>
-        <Button colorScheme="blue" variant="outline" size="sm">
+        <Button colorScheme="pink" variant="outline" size="sm">
           Learn More
         </Button>
       </Link>

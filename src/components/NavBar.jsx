@@ -24,7 +24,7 @@ function Navbar() {
       justify="space-between"
       wrap="wrap"
       padding="1.5rem"
-      bgGradient="linear(to-r, purple.500, blue.500)"
+      bgGradient="linear(to-r, orange.500, pink.500)"
       color="white"
     >
       <Flex align="center">
