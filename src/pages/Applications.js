@@ -9,7 +9,7 @@ import {
   Link,
   Image,
 } from "@chakra-ui/react";
-import community from "../images/community.jpg";
+import community from "../images/community.jpeg";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 

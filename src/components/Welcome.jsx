@@ -26,8 +26,8 @@ function Welcome() {
           The Kansas Blockchain Fellowship
         </Text>
         <Text fontSize={{ base: "md", md: "lg" }} color="black">
-          A seven-week, experiential learning intensive, scholarship program,
-          and talent incubator to prepare students in Kansas for careers in
+          A seven-week experiential learning intensive, scholarship program, and
+          talent incubator to prepare students in Kansas for careers in
           blockchain and web3.
         </Text>
       </VStack>
