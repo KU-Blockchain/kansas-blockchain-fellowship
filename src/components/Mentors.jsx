@@ -18,6 +18,7 @@ import joe_headshot from "../images/mentor_headshots/joe_roets.png";
 import daniel_headshot from "../images/mentor_headshots/daniel_jones.jpeg";
 import perry_headshot from "../images/mentor_headshots/perry_alexander.jpeg";
 import kevin_headshot from "../images/mentor_headshots/kevin_galler.jpeg";
+import jennifer_headshot from "../images/mentor_headshots/jennifer_lohoefener.jpeg";
 
 import i2s from "../images/logos/i2s.png";
 import dragonChain from "../images/logos/dragonchain.png";
@@ -55,6 +56,15 @@ const Mentors = () => {
       shortBio:
         "Daniel is a tech-enabled young professional who is passionate about challenging the status quo and driving forward a positive disruption.",
       bio: "Daniel is a tech-enabled young professional who is passionate about challenging the status quo and driving forward a positive disruption. He enjoys building communities around common interests, educating and learning about emerging technologies, and engaging with new opportunities all the time.",
+    },
+    {
+      headshot: jennifer_headshot,
+      title: "Associate Director & Assistand Research Professor at I2S",
+      name: "Dr. Jennifer Lohoefener",
+      company_logo: i2s,
+      shortBio:
+        "Dr. Lohoefener is KU Blockchain Institute's faculty advisor and a long-time supporter of blockchain research at the University of Kansas.",
+      bio: "Dr. Lohoefener is KU Blockchain Institute's advisor and a long-time supporter of blockchain research at the University of Kansas. She brings experience from both academia and industry, including work at Ad Astra and Mylo.",
     },
     {
       headshot: perry_headshot,
