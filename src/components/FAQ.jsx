@@ -36,6 +36,12 @@ const faqData = [
     answer:
       "Exceptional students who do not meet the traditional requirements are still encouraged to apply.",
   },
+  {
+    question:
+      "I'm working this summer. Can I still participate in the fellowship?",
+    answer:
+      "All classes will be in the evenings, from 7-9pm with dinner provided at 6:30. There will also be assignments to be completed outside of class time, to maximize the learning experience. It's up to you to decide if you can balance the workload of the program with your other commitments, but the timing of the program is designed to be accessible to students with other work obligations.",
+  },
 ];
 
 function FAQ({ faqs = faqData }) {
