@@ -4,10 +4,13 @@ import { Box, Text, Link } from "@chakra-ui/react";
 function AboutPreview() {
   return (
     <Box textAlign="center" py={10}>
+      <Text textColor="gray" mt={3} mx={8}>
+        opportunities for
+      </Text>
       <Text fontSize="xl" mt={5} fontWeight="bold" mx={6}>
         Education, Mentorship, & Professional Development
       </Text>
-      <Text mt={3} mx={8}>
+      <Text mt={3} mx={8} textColor="gray.300">
         This program is designed to give exceptional students in the Midwest
         deep knowledge and experience around blockchain, digital assets, and
         web3 to prepare them for careers in the industry.

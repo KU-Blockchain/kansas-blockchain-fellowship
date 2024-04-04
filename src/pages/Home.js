@@ -19,8 +19,9 @@ function Home() {
       <ThreeCircles />
       <Team />
       <Mentors />
-      <WindmillImage />
+
       <Eligibility />
+      <WindmillImage />
       <Footer />
     </Box>
   );

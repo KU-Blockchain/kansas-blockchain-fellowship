@@ -1,13 +1,17 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
 import WindmillImage from "../components/WindmillImage";
-import AboutPreview from "../components/AboutPreview";
+import AboutProgram from "../components/AboutProgram";
 import Footer from "../components/Footer";
+import ProgramOutline from "../components/ProgramOutline";
+import Curriculum from "../components/Curriculum";
 
 function About() {
   return (
     <Box className="About">
-      <AboutPreview />
+      <AboutProgram />
+      <ProgramOutline />
+      <Curriculum />
       <WindmillImage />
       <Text></Text>
       <Footer />
