@@ -1,6 +1,19 @@
 import React from "react";
-import { Box, Flex, Text, Link as ChakraLink, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Link as ChakraLink,
+  Image,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import logo from "../images/logo.png";
 
 function Navbar() {
@@ -17,6 +30,9 @@ function Navbar() {
     },
   };
 
+  // Determine if the navbar should be collapsed based on the breakpoint
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
   return (
     <Flex
       as="nav"
@@ -29,29 +45,47 @@ function Navbar() {
     >
       <Flex align="center">
         <ChakraLink as={Link} to="/" display="flex" alignItems="center">
-          <Image
-            src={logo}
-            boxSize="50px" // Set the size of your logo
-            pb="4px"
-            marginRight="12px"
-          />
+          <Image src={logo} boxSize="50px" pb="4px" marginRight="12px" />
         </ChakraLink>
         <Text fontSize="lg" fontWeight="bold">
           The Kansas Blockchain Fellowship
         </Text>
       </Flex>
-      <Box display="flex" alignItems="center">
-        <ChakraLink as={Link} to="/about" sx={linkStyle}>
-          About
-        </ChakraLink>
-        <ChakraLink as={Link} to="/sponsorships" sx={linkStyle}>
-          Sponsorships
-        </ChakraLink>
-        <ChakraLink as={Link} to="/applications" sx={linkStyle}>
-          Applications
-        </ChakraLink>
-        {/* Add more navigation links as needed */}
-      </Box>
+      {isMobile ? (
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            icon={<HamburgerIcon />}
+            variant="outline"
+            color="white"
+          />
+          <MenuList>
+            <MenuItem as={Link} to="/about">
+              About
+            </MenuItem>
+            <MenuItem as={Link} to="/sponsorships">
+              Sponsorships
+            </MenuItem>
+            <MenuItem as={Link} to="/applications">
+              Applications
+            </MenuItem>
+            {/* Add more navigation links as needed */}
+          </MenuList>
+        </Menu>
+      ) : (
+        <Box display="flex" alignItems="center">
+          <ChakraLink as={Link} to="/about" sx={linkStyle}>
+            About
+          </ChakraLink>
+          <ChakraLink as={Link} to="/sponsorships" sx={linkStyle}>
+            Sponsorships
+          </ChakraLink>
+          <ChakraLink as={Link} to="/applications" sx={linkStyle}>
+            Applications
+          </ChakraLink>
+          {/* Add more navigation links as needed */}
+        </Box>
+      )}
     </Flex>
   );
 }

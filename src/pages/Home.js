@@ -17,10 +17,9 @@ function Home() {
       <Welcome />
       <About />
       <ThreeCircles />
-      <Team />
       <Mentors />
-
       <Eligibility />
+      <Team />
       <WindmillImage />
       <Footer />
     </Box>

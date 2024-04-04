@@ -83,7 +83,7 @@ function Applications() {
         </Box>
       </Flex>
 
-      <Text mt={5} fontSize="sm" textAlign="center">
+      <Text mt={5} fontSize="xs" textAlign="center">
         Please reach out to{" "}
         <Link
           href="mailto:kansasblockchainfellowship@gmail.com"

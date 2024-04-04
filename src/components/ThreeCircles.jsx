@@ -12,7 +12,7 @@ const ThreeCircles = () => {
     <>
       <Box pt={"12vh"} pb={"12vh"}>
         <Text
-          fontSize="4xl"
+          fontSize={{ base: "2xl", md: "4xl" }} // Responsive font size
           fontWeight="bold"
           textAlign="center"
           color="white"
@@ -21,16 +21,16 @@ const ThreeCircles = () => {
           Program Pillars
         </Text>
         <Flex
-          direction={{ base: "column", md: "row" }} // Stacks vertically on small screens, horizontally on medium and up
+          direction={{ base: "column", md: "row" }}
           justifyContent="center"
           alignItems="center"
-          gap="4" // Adds space between items regardless of the direction
+          gap="4"
         >
           {circles.map((circle, index) => (
             <AspectRatio
               key={index}
               ratio={1}
-              width={{ base: "80%", md: "25%" }}
+              width={{ base: "80vw", sm: "30vw", md: "20vw", lg: "15vw" }} // More responsive steps for width
             >
               <Box
                 bgGradient={circle.gradient}
@@ -39,13 +39,14 @@ const ThreeCircles = () => {
                 alignItems="center"
                 justifyContent="center"
                 boxShadow="xl"
-                border="4px solid black" // Example border
+                border="4px solid black"
               >
                 <Text
                   color="white"
                   fontWeight="bold"
                   textAlign="center"
-                  fontSize="xl"
+                  fontSize={{ base: "md", md: "lg", lg: "xl" }} // Responsive font size within the circle
+                  p={4} // Padding to ensure text does not touch the edges
                 >
                   {circle.title}
                 </Text>
