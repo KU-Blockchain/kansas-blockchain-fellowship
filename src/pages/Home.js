@@ -9,6 +9,7 @@ import WindmillImage from "../components/WindmillImage";
 import ThreeCircles from "../components/ThreeCircles";
 import Footer from "../components/Footer";
 import Eligibility from "../components/Eligibility";
+import ProgramOutline from "../components/ProgramOutline";
 
 function Home() {
   return (
@@ -16,9 +17,9 @@ function Home() {
       {/* <ColorModeSwitcher /> */}
       <Welcome />
       <About />
-      <ThreeCircles />
+      {/* <ThreeCircles /> */}
       <Mentors />
-      <Eligibility />
+      <ProgramOutline />
       <Team />
       <WindmillImage />
       <Footer />

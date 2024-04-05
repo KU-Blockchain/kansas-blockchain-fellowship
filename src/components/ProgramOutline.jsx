@@ -13,7 +13,7 @@ import working_together from "../images/working_together.jpeg"; // Ensure this p
 
 function ProgramOutline() {
   const listItems = [
-    "classes every Thursday from 7:00 - 9:00 PM CST",
+    "classes at KU's campus every Thursday from 7:00 - 9:00 PM CST",
     "meals provided at every class",
     "a scholarship of granted in full upon completion of the program",
     "a bonus, quadratically allocated award pool for outstanding projects",

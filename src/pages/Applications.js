@@ -12,6 +12,7 @@ import {
 import community from "../images/community.jpeg";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
+import Eligibility from "../components/Eligibility";
 
 function Applications() {
   return (
@@ -56,6 +57,7 @@ function Applications() {
           </VStack>
         </Box>
       </Flex>
+      <Eligibility />
       <FAQ />
       <Flex
         direction="column"

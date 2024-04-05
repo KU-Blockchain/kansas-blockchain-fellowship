@@ -19,7 +19,7 @@ import logo from "../images/logo.png";
 function Navbar() {
   const linkStyle = {
     marginRight: "5",
-    padding: "6px 14px",
+    padding: "3px 10px",
     borderRadius: "md",
     border: "2px solid white",
     backgroundColor: "rgba(255, 255, 255, 0.2)",
@@ -28,6 +28,7 @@ function Navbar() {
       backgroundColor: "white",
       color: "purple.600",
     },
+    fontSize: "md",
   };
 
   // Determine if the navbar should be collapsed based on the breakpoint
@@ -46,10 +47,11 @@ function Navbar() {
       <Flex align="center">
         <ChakraLink as={Link} to="/" display="flex" alignItems="center">
           <Image src={logo} boxSize="50px" pb="4px" marginRight="12px" />
+
+          <Text fontSize="md" fontWeight="bold">
+            The Kansas Blockchain Fellowship
+          </Text>
         </ChakraLink>
-        <Text fontSize="lg" fontWeight="bold">
-          The Kansas Blockchain Fellowship
-        </Text>
       </Flex>
       {isMobile ? (
         <Menu>

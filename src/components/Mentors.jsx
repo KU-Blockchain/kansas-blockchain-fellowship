@@ -14,7 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Mentor from "./Mentor";
-import joe_headshot from "../images/mentor_headshots/joe_roets.png";
+import joe_headshot from "../images/mentor_headshots/joe_roets.jpeg";
 import daniel_headshot from "../images/mentor_headshots/daniel_jones.jpeg";
 import perry_headshot from "../images/mentor_headshots/perry_alexander.jpeg";
 import kevin_headshot from "../images/mentor_headshots/kevin_galler.jpeg";
@@ -45,7 +45,7 @@ const Mentors = () => {
       company_logo: dragonChain,
       shortBio:
         "Joe is the Founder and CEO of Dragonchain, who has been a wonderful mentor in the KU Blockchain community.",
-      bio: "Joe is the Founder and Chief Executive Officer of Dragonchain. He has over 20 years of experience in software architecture focusing on security and scalability. He has created and led multiple technology startups since the mid 1990s. He is a visionary and thought leader in blockchain technology having led or contributed to projects in the space since 2010 at companies such as Overstock, Coinbase, Symbiont, & the Walt Disney Company.",
+      bio: "Joe is the Founder and Chief Executive Officer of Dragonchain. He has over 20 years of experience in software architecture focusing on security and scalability. He has created and led multiple technology startups since the mid 1990s. He is a visionary and thought leader in blockchain technology having led or contributed to projects in the space since 2010 at companies such as Overstock, Coinbase, Lockheed Martin, & the Walt Disney Company.",
       moreImages: [disney],
     },
     {
@@ -59,7 +59,7 @@ const Mentors = () => {
     },
     {
       headshot: jennifer_headshot,
-      title: "Associate Director & Assistand Research Professor at I2S",
+      title: "Associate Director & Assistant Research Professor at I2S",
       name: "Dr. Jennifer Lohoefener",
       company_logo: i2s,
       shortBio:
