@@ -4,7 +4,7 @@ import Welcome from "../components/Welcome";
 import { Box, Image } from "@chakra-ui/react";
 import Team from "../components/Team";
 import Mentors from "../components/Mentors";
-import ColorModeSwitcher from "../components/ColorModeSwitcher";
+//import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import WindmillImage from "../components/WindmillImage";
 import ThreeCircles from "../components/ThreeCircles";
 import Footer from "../components/Footer";

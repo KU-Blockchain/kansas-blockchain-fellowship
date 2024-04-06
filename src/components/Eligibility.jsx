@@ -26,9 +26,10 @@ function Eligibility() {
       align="center"
       justify="center"
       py={10}
+      p={20} // consistent padding on all sides
       gap={5}
     >
-      <Box textAlign="left" px={5} width={{ base: "100%", md: "50%" }}>
+      <Box textAlign="left" width={{ base: "100%", md: "50%" }}>
         <Text fontSize="xl" mt={5} fontWeight="bold">
           Eligibility
         </Text>
@@ -52,7 +53,6 @@ function Eligibility() {
         </Flex>
       </Box>
       <Box
-        px={5}
         width={{ base: "100%", md: "50%" }} // Takes full width on small screens
       >
         <Image

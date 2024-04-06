@@ -1,4 +1,5 @@
 import React from "react";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import {
   Box,
   Flex,
@@ -15,6 +16,7 @@ import {
 import { Link } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import logo from "../images/logo.png";
+import { useColorMode, Button } from "@chakra-ui/react";
 
 function Navbar() {
   const linkStyle = {
@@ -29,6 +31,15 @@ function Navbar() {
       color: "purple.600",
     },
     fontSize: "md",
+  };
+
+  const ColorModeSwitcher = () => {
+    const { colorMode, toggleColorMode } = useColorMode();
+    return (
+      <Button onClick={toggleColorMode} sx={linkStyle}>
+        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+      </Button>
+    );
   };
 
   // Determine if the navbar should be collapsed based on the breakpoint
@@ -71,6 +82,9 @@ function Navbar() {
             <MenuItem as={Link} to="/applications">
               Applications
             </MenuItem>
+            <MenuItem>
+              <ColorModeSwitcher as={Link} />
+            </MenuItem>
             {/* Add more navigation links as needed */}
           </MenuList>
         </Menu>
@@ -85,6 +99,7 @@ function Navbar() {
           <ChakraLink as={Link} to="/applications" sx={linkStyle}>
             Applications
           </ChakraLink>
+          <ColorModeSwitcher />
           {/* Add more navigation links as needed */}
         </Box>
       )}
