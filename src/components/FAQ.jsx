@@ -46,7 +46,7 @@ const faqData = [
 
 function FAQ({ faqs = faqData }) {
   return (
-    <Box margin={20}>
+    <Box margin={[20,20]}>
       <Heading mb={4} textAlign="center">
         FAQs
       </Heading>
@@ -59,7 +59,9 @@ function FAQ({ faqs = faqData }) {
               </Box>
               <AccordionIcon />
             </AccordionButton>
-            <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
+            <AccordionPanel pb={4} fontSize="sm">
+              {faq.answer}
+            </AccordionPanel>
           </AccordionItem>
         ))}
       </Accordion>
