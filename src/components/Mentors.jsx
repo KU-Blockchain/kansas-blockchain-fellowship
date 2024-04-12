@@ -19,15 +19,21 @@ import daniel_headshot from "../images/mentor_headshots/daniel_jones.jpeg";
 import perry_headshot from "../images/mentor_headshots/perry_alexander.jpeg";
 import kevin_headshot from "../images/mentor_headshots/kevin_galler.jpeg";
 import jennifer_headshot from "../images/mentor_headshots/jennifer_lohoefener.jpeg";
+import thea_headshot from "../images/mentor_headshots/thea_neal.jpeg";
+import austin_headshot from "../images/mentor_headshots/austin_adams.jpeg";
+import thomas_headshot from "../images/mentor_headshots/thomas_flynn.jpeg";
 
 import i2s from "../images/logos/i2s.png";
 import dragonChain from "../images/logos/dragonchain.png";
 import sams_club from "../images/logos/sams_club.png";
 import disney from "../images/logos/disney.png";
-import uniswp from "../images/logos/uniswap.png";
+import uniswap from "../images/logos/uniswap.png";
 import pinata from "../images/logos/pinata.png";
 import apple from "../images/logos/apple.png";
 import monad from "../images/logos/monad.jpeg";
+import coinbase from "../images/logos/coinbase.png";
+import apex_fusion from "../images/logos/apex_fusion.jpeg";
+import iohk from "../images/logos/iohk.jpeg";
 
 const Mentors = () => {
   const [selectedMentor, setSelectedMentor] = useState(null);
@@ -38,6 +44,35 @@ const Mentors = () => {
   };
 
   const mentors = [
+    {
+      headshot: austin_headshot,
+      title: "Research at Uniswap",
+      name: "Austin Adams",
+      company_logo: uniswap,
+      shortBio:
+        "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+      bio: "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+    },
+    {
+      headshot: thea_headshot,
+      title: "Leading Talent Brand at Coinbase",
+      name: "Thea Neal",
+      company_logo: coinbase,
+      shortBio:
+        "Thea leads Talent Brand and Events at Coinbase, the most world's most trusted way to join the crypto revolution. She has been featured in Forbes 30 under 30.",
+      bio: "Thea leads Talent Brand and Events at Coinbase, the most world's most trusted way to join the crypto revolution. She has been featured in Forbes 30 under 30.",
+    },
+    {
+      headshot: thomas_headshot,
+      title: "Core Contributor at Apex Fusion",
+      name: "Thomas Flynn",
+      company_logo: apex_fusion,
+      shortBio:
+        "Thomas is a core contributor at Apex Fusion, bringing experience from Spheron Network and Input Output (IOHK).",
+      bio: "Thomas is a core contributor at Apex Fusion. He is the former Head of Business Development U.S. at Spheron Network and Commercial Director at Input Output (IOHK).",
+      moreImages: [iohk],
+    },
+
     {
       headshot: joe_headshot,
       title: "Chief Architect & Founder Dragonchain",
