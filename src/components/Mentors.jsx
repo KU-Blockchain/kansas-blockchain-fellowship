@@ -22,6 +22,8 @@ import jennifer_headshot from "../images/mentor_headshots/jennifer_lohoefener.jp
 import thea_headshot from "../images/mentor_headshots/thea_neal.jpeg";
 import austin_headshot from "../images/mentor_headshots/austin_adams.jpeg";
 import thomas_headshot from "../images/mentor_headshots/thomas_flynn.jpeg";
+import paige_headshot from "../images/mentor_headshots/paige_jones.jpeg";
+import samantha_headshot from "../images/mentor_headshots/samantha_mitra.jpeg";
 
 import i2s from "../images/logos/i2s.png";
 import dragonChain from "../images/logos/dragonchain.png";
@@ -34,6 +36,8 @@ import monad from "../images/logos/monad.jpeg";
 import coinbase from "../images/logos/coinbase.png";
 import apex_fusion from "../images/logos/apex_fusion.jpeg";
 import iohk from "../images/logos/iohk.jpeg";
+import solana from "../images/logos/solana.png";
+import spheron from "../images/logos/spheron_network.jpeg";
 
 const Mentors = () => {
   const [selectedMentor, setSelectedMentor] = useState(null);
@@ -54,13 +58,32 @@ const Mentors = () => {
       bio: "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     },
     {
+      headshot: paige_headshot,
+      title: "Software Engineer at Piñata",
+      name: "Paige Jones",
+      company_logo: pinata,
+      shortBio:
+        "Paige is a builder and a maker. She loves developing web3 applications that solve real world problems by providing thoughtful and creative solutions. She is a KU Alumna.",
+      bio: "Paige is a builder and a maker. She loves developing web3 applications that solve real world problems by providing thoughtful and creative solutions. She is a KU Alumna.",
+    },
+    {
       headshot: thea_headshot,
       title: "Leading Talent Brand at Coinbase",
       name: "Thea Neal",
       company_logo: coinbase,
       shortBio:
-        "Thea leads Talent Brand and Events at Coinbase, the most world's most trusted way to join the crypto revolution. She has been featured in Forbes 30 under 30.",
+        "Thea leads Talent Brand and Events at Coinbase. She has been featured in Forbes 30 under 30.",
       bio: "Thea leads Talent Brand and Events at Coinbase, the most world's most trusted way to join the crypto revolution. She has been featured in Forbes 30 under 30.",
+    },
+    {
+      headshot: kevin_headshot,
+      name: "Kevin Galler",
+      title: "Developer Relations Engineer at Monad Labs",
+      company_logo: monad,
+      shortBio:
+        "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer at Apple.",
+      bio: "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer (Interactive Media Group) at Apple. \nBS / MS Graduate of Computer Engineering / Electrical and Computer Engineering at Purdue University (Indianapolis Campus) 2013-2017. \nSpecialization in Computer Engineering and Signal Processing (both specialization requirements satisfied).",
+      moreImages: [apple, solana],
     },
     {
       headshot: thomas_headshot,
@@ -70,12 +93,12 @@ const Mentors = () => {
       shortBio:
         "Thomas is a core contributor at Apex Fusion, bringing experience from Spheron Network and Input Output (IOHK).",
       bio: "Thomas is a core contributor at Apex Fusion. He is the former Head of Business Development U.S. at Spheron Network and Commercial Director at Input Output (IOHK).",
-      moreImages: [iohk],
+      moreImages: [iohk, spheron],
     },
 
     {
       headshot: joe_headshot,
-      title: "Chief Architect & Founder Dragonchain",
+      title: "Chief Architect & Founder of Dragonchain",
       name: "Joe Roets",
       company_logo: dragonChain,
       shortBio:
@@ -83,6 +106,16 @@ const Mentors = () => {
       bio: "Joe is the Founder and Chief Executive Officer of Dragonchain. He has over 20 years of experience in software architecture focusing on security and scalability. He has created and led multiple technology startups since the mid 1990s. He is a visionary and thought leader in blockchain technology having led or contributed to projects in the space since 2010 at companies such as Overstock, Coinbase, Lockheed Martin, & the Walt Disney Company.",
       moreImages: [disney],
     },
+    {
+      headshot: samantha_headshot,
+      title: "Policy and Legal at Uniswap",
+      name: "Samantha Deori-Mitra",
+      company_logo: uniswap,
+      shortBio:
+        "Samantha graduated from the University of Kansas in 2020 and her masters degree in public policy from Columbia University.",
+      bio: "Samantha graduated from the University of Kansas in 2020. She received her masters degree in public policy from Columbia University in 2022 and has been working in policy and legal at Uniswap since 2022.",
+    },
+
     {
       headshot: daniel_headshot,
       name: "Daniel Jones",
@@ -110,20 +143,10 @@ const Mentors = () => {
         "AT&T Foundation Distinguished Professor and ITTC Director at The University of Kansas.",
       bio: "AT&T Foundation Distinguished Professor and ITTC Director at The University of Kansas. Research and teaching interests include formal methods, remote attestation, program verification and synthesis, and languages. Currenting working on frameworks for establishing trust in remote systems. Still looking for my turntable remote.",
     },
-    {
-      headshot: kevin_headshot,
-      name: "Kevin Galler",
-      title: "Developer Relations Engineer at Monad Labs",
-      company_logo: monad,
-      shortBio:
-        "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer at Apple.",
-      bio: "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer (Interactive Media Group) at Apple. \nBS / MS Graduate of Computer Engineering / Electrical and Computer Engineering at Purdue University (Indianapolis Campus) 2013-2017. \nSpecialization in Computer Engineering and Signal Processing (both specialization requirements satisfied).",
-      moreImages: [apple],
-    },
   ];
 
   return (
-    <Box>
+    <Box display="flex" flexDirection="column" alignItems="center" my={5} m="5">
       <Heading as="h2" size="xl" textAlign="center" my={5}>
         Our Mentors
       </Heading>
