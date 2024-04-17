@@ -10,7 +10,7 @@ function AboutPreview() {
       <Text fontSize="xl" mt={5} fontWeight="bold" mx={6}>
         Education, Mentorship, & Professional Development
       </Text>
-      <Text mt={3} mx={8} textColor="gray.300">
+      <Text mt={3} mx={8} textColor="gray.400">
         This program is designed to give exceptional students in the Midwest
         deep knowledge and experience around blockchain, digital assets, and
         web3 to prepare them for careers in the industry.
