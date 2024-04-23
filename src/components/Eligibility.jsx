@@ -42,7 +42,7 @@ function Eligibility() {
           ))}
         </UnorderedList>
         <Text mt={3} fontSize="md" fontWeight="bold">
-          Applications close April 21, 2024 at 11:59 PM CST.
+          Applications close April 30, 2024 at 11:59 PM CST.
         </Text>
         <Flex justifyContent="center" mt={4}>
           <Link href="https://forms.gle/Ej9kwQueqKgPjgJp6" isExternal>
