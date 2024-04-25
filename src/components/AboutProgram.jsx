@@ -15,8 +15,8 @@ function AboutProgram() {
         internship.
       </Text>
       <Text textColor="gray.400" mr={"15vh"} ml={"15vh"} mt={"30px"}>
-        The Fellowship will consist of weekly classes running from June 11 -
-        July 23 with a final project showcase on Friday, July 26.
+        The Fellowship will consist of weekly classes running from June 13 -
+        July 25 with a final project showcase on Friday, July 26.
       </Text>
       <Text textColor="gray.400" mr={"15vh"} ml={"15vh"} mt={"30px"}></Text>
     </Box>
