@@ -13,7 +13,8 @@ import working_together from "../images/working_together.jpeg"; // Ensure this p
 
 function Eligibility() {
   const listItems = [
-    "are currently pursuing a bachelor's degree at an accredited university in Kansas or within a driveable distance from Lawrence, KS",
+    "are currently enrolled at an accredited high school or university",
+    "will be within driveable distance of Lawrence, Kansas for the duration of the program",
     "are interested in blockchain, crypto, web3, or principles of decentralization",
     "think outside the box and ask good questions",
     "have demonstrated academic excellence in their field of study",
@@ -42,7 +43,7 @@ function Eligibility() {
           ))}
         </UnorderedList>
         <Text mt={3} fontSize="md" fontWeight="bold">
-          Applications close April 30, 2024 at 11:59 PM CST.
+          Applications close May 10, 2024 at 11:59 PM CST.
         </Text>
         <Flex justifyContent="center" mt={4}>
           <Link href="https://forms.gle/Ej9kwQueqKgPjgJp6" isExternal>

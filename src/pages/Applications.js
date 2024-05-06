@@ -41,7 +41,7 @@ function Applications() {
             </Heading>
             <Text textAlign="center">
               Applications are considered on a rolling basis. The application
-              window will close April 30, 2024 at 11:59pm CST. Applicants may be
+              window will close May 10, 2024 at 11:59pm CST. Applicants may be
               offered an interview, which will be a 45 minute conversation with
               2-3 members of the admissions committee.{" "}
             </Text>
