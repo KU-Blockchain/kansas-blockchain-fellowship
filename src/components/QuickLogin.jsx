@@ -3,33 +3,29 @@ import { useNavigate } from "react-router-dom";
 
 function QuickLogin() {
   const navigate = useNavigate();
-  const scriptId = "quicklogin-sdk"; // Consistent script ID
-  const buttonContainerId = "quicklogin-container"; // Consistent container ID
+  const scriptId = "quicklogin-sdk";
+  const buttonContainerId = "quicklogin-container";
 
   useEffect(() => {
     const loadQuickLoginSDK = () => {
-      let script = document.getElementById(scriptId);
-      if (!script) {
-        script = document.createElement("script");
-        script.id = scriptId;
-        script.src =
-          "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.1.1/dist/quicklogin.js";
-        script.onload = initializeQuickLogin;
-        document.body.appendChild(script);
-      } else {
-        // If script exists, just initialize QuickLogin directly
-        initializeQuickLogin();
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.parentNode.removeChild(existingScript);
       }
+
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src =
+        "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.1.1/dist/quicklogin.js";
+      script.onload = () => setTimeout(initializeQuickLogin, 100);
+      document.body.appendChild(script);
     };
 
     const initializeQuickLogin = () => {
-      // Remove any existing QuickLogin buttons
       const existingButtons = document.querySelectorAll("div[data-quicklogin]");
-      existingButtons.forEach((button) => {
-        if (button.parentNode) {
-          button.parentNode.removeChild(button);
-        }
-      });
+      existingButtons.forEach((button) =>
+        button.parentNode.removeChild(button)
+      );
 
       let buttonContainer = document.getElementById(buttonContainerId);
       if (!buttonContainer) {
@@ -41,10 +37,12 @@ function QuickLogin() {
       buttonContainer.style.position = "absolute";
       buttonContainer.style.left = "50%";
       buttonContainer.style.transform = "translateX(-50%)";
-      buttonContainer.style.width = "100%";
+      buttonContainer.style.width = "50%";
       buttonContainer.style.display = "flex";
       buttonContainer.style.justifyContent = "center";
       buttonContainer.style.alignItems = "center";
+      buttonContainer.style.padding = "40px"; // Increased padding
+      buttonContainer.style.backgroundColor = "white"; // Temporarily set a semi-transparent white background
 
       if (window.QuickLogin) {
         window.QuickLogin.createQuickLogin({
@@ -74,7 +72,7 @@ function QuickLogin() {
     };
   }, [navigate]);
 
-  return null; // No need to return a container from the component
+  return null;
 }
 
 export default QuickLogin;

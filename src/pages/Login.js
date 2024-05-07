@@ -5,7 +5,7 @@ import QuickLogin from "../components/QuickLogin";
 function Login() {
   return (
     <Box textAlign="center" py={10}>
-      <Text fontSize="xl" mt={5} fontWeight="bold" mx={6}>
+      <Text fontSize="xl" mt={5} color="gray.100" fontWeight="bold" mx={6}>
         Fellow and Mentor Login
       </Text>
       <Text color="gray.400" mx="15vh">
