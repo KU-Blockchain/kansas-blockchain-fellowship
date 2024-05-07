@@ -1,4 +1,5 @@
 import React from "react";
+import Calendar from "../components/After_auth/Calendar";
 
 import { Box, Text, Image } from "@chakra-ui/react";
 
@@ -10,6 +11,7 @@ function Dashboard() {
       </Text>
 
       <Text textColor="gray.400" mr={"15vh"} ml={"15vh"} mt={"30px"}></Text>
+      <Calendar />
     </Box>
   );
 }
