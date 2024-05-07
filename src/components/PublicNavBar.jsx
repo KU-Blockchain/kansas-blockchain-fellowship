@@ -1,5 +1,4 @@
 import React from "react";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import {
   Box,
   Flex,
@@ -12,13 +11,14 @@ import {
   MenuItem,
   IconButton,
   useBreakpointValue,
+  useColorMode,
+  Button,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link, useLocation } from "react-router-dom";
+import { HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import logo from "../images/logo.png";
-import { useColorMode, Button } from "@chakra-ui/react";
 
-function Navbar() {
+function PublicNavbar() {
   const linkStyle = {
     marginRight: "5",
     padding: "3px 10px",
@@ -32,18 +32,18 @@ function Navbar() {
     },
     fontSize: "md",
   };
+  const { colorMode, toggleColorMode } = useColorMode();
+  const location = useLocation();
+  const isMobile = useBreakpointValue({ base: true, md: false });
+  const onDashboard = location.pathname === "/dashboard"; // Check if the current route is the dashboard
 
   const ColorModeSwitcher = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
     return (
       <Button onClick={toggleColorMode} sx={linkStyle}>
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       </Button>
     );
   };
-
-  // Determine if the navbar should be collapsed based on the breakpoint
-  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Flex
@@ -58,13 +58,12 @@ function Navbar() {
       <Flex align="center">
         <ChakraLink as={Link} to="/" display="flex" alignItems="center">
           <Image src={logo} boxSize="50px" pb="4px" marginRight="12px" />
-
           <Text fontSize="md" fontWeight="bold">
             The Kansas Blockchain Fellowship
           </Text>
         </ChakraLink>
       </Flex>
-      {isMobile ? (
+      {isMobile || onDashboard ? (
         <Menu>
           <MenuButton
             as={IconButton}
@@ -81,6 +80,9 @@ function Navbar() {
             </MenuItem>
             <MenuItem as={Link} to="/applications">
               Applications
+            </MenuItem>
+            <MenuItem as={Link} to="/login">
+              Login
             </MenuItem>
             <MenuItem>
               <ColorModeSwitcher as={Link} />
@@ -99,6 +101,9 @@ function Navbar() {
           <ChakraLink as={Link} to="/applications" sx={linkStyle}>
             Applications
           </ChakraLink>
+          <ChakraLink as={Link} to="/login" sx={linkStyle}>
+            Login
+          </ChakraLink>
           <ColorModeSwitcher />
           {/* Add more navigation links as needed */}
         </Box>
@@ -107,4 +112,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default PublicNavbar;
