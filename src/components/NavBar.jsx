@@ -82,6 +82,9 @@ function Navbar() {
             <MenuItem as={Link} to="/applications">
               Applications
             </MenuItem>
+            <MenuItem as={Link} to="/login">
+              Login
+            </MenuItem>
             <MenuItem>
               <ColorModeSwitcher as={Link} />
             </MenuItem>
@@ -98,6 +101,9 @@ function Navbar() {
           </ChakraLink>
           <ChakraLink as={Link} to="/applications" sx={linkStyle}>
             Applications
+          </ChakraLink>
+          <ChakraLink as={Link} to="/login" sx={linkStyle}>
+            Login
           </ChakraLink>
           <ColorModeSwitcher />
           {/* Add more navigation links as needed */}
