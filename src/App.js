@@ -5,6 +5,7 @@ import Sponsorships from "./pages/Sponsorships";
 import Applications from "./pages/Applications";
 import About from "./pages/About";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 import { Box, Image } from "@chakra-ui/react";
 import Home from "./pages/Home";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/sponsorships" element={<Sponsorships />} />
           <Route path="/applications" element={<Applications />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </Box>
