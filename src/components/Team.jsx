@@ -18,6 +18,7 @@ import TeamMember from "./TeamMember"; // Make sure this import path is correct
 import emma_headshot from "../images/team_headshots/emma.jpeg";
 import yash_headshot from "../images/team_headshots/yash.jpeg";
 import jahnvi_headshot from "../images/team_headshots/jahnvi.jpeg";
+import micah_headshot from "../images/team_headshots/micah.JPG";
 
 const Team = () => {
   const [selectedMember, setSelectedMember] = useState(null); // State to track the selected team member
@@ -28,25 +29,33 @@ const Team = () => {
       headshot: emma_headshot,
       title: "Program Director",
       name: "Emma Nasseri",
-      bio: "Emma is a final year Honors Computer Science and Visual Arts student. She is President of the KU Blockchain Institute.",
+      bio: "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
       longBio:
-        "Emma is a final year Honors Computer Science and Visual Arts student. She is President of the KU Blockchain Institute.",
+        "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
     },
     {
       headshot: jahnvi_headshot,
       name: "Jahnvi Maddila",
-      title: "Director of Education",
-      bio: "Jahnvi is a sophomore in the Honors Program studying Computer Science. She is Director of Communications for the KU Blockchain Institute.",
+      title: "Vice Director",
+      bio: "Jahnvi is a junior in the Honors Program studying Computer Science. She is the VP of Engineering for the KU Blockchain Institute.",
       longBio:
-        "Jahnvi is a sophomore in the Honors Program studying Computer Science. She is Director of Communications for the KU Blockchain Institute.",
+        "Jahnvi is a junior in the Honors Program studying Computer Science. She is the VP of Engineering for the KU Blockchain Institute.",
     },
     {
       headshot: yash_headshot,
       name: "Yash Prajapati",
       title: "Head of Partnerships",
-      bio: "Yash is a sophomore in the Honors Program studying Applied Computing and Mathematics. He is the VP of Finance for the KU Blockchain Institute.",
+      bio: "Yash is a junior in the Honors Program studying Applied Computing and Mathematics. He is the VP of Finance for the KU Blockchain Institute.",
       longBio:
-        "Yash is a sophomore in the Honors Program studying Applied Computing and Mathematics. He is the VP of Finance for the KU Blockchain Institute.",
+        "Yash is a junior in the Honors Program studying Applied Computing and Mathematics. He is the VP of Finance for the KU Blockchain Institute.",
+    },
+    {
+      headshot: micah_headshot,
+      name: "Micah Borghese",
+      title: "Diector of Education",
+      bio: "Micah is a senior in the Honors Program studying Computer Science and Mathematics. He is the President for the KU Blockchain Institute.",
+      longBio:
+        "Micah is a senior in the Honors Program studying Computer Science and Mathematics. He is the President for the KU Blockchain Institute.",
     },
   ];
   const openModal = (member) => {
