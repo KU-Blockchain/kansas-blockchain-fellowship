@@ -37,23 +37,8 @@ function Applications() {
             {" "}
             {/* Stack the heading and button vertically */}
             <Heading as="h1" size="lg" textAlign="center">
-              Applications for Summer 2024 are now open
+              Applications for Summer 2024 have are now closed.
             </Heading>
-            <Text textAlign="center">
-              Applications are considered on a rolling basis. The application
-              window will close May 10, 2024 at 11:59pm CST. Applicants may be
-              offered an interview, which will be a 45 minute conversation with
-              2-3 members of the admissions committee.{" "}
-            </Text>
-            <Button
-              colorScheme="teal"
-              size="md"
-              onClick={() =>
-                window.open("https://forms.gle/EeXM3tLGEyLaWY1PA", "_blank")
-              }
-            >
-              Apply Here
-            </Button>
           </VStack>
         </Box>
       </Flex>

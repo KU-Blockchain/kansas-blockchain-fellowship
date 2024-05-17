@@ -43,15 +43,9 @@ function Eligibility() {
           ))}
         </UnorderedList>
         <Text mt={3} fontSize="md" fontWeight="bold">
-          Applications close May 10, 2024 at 11:59 PM CST.
+          Applications for Summer 2024 have closed.
         </Text>
-        <Flex justifyContent="center" mt={4}>
-          <Link href="https://forms.gle/Ej9kwQueqKgPjgJp6" isExternal>
-            <Button colorScheme="pink" variant="outline" size="md">
-              Apply Here
-            </Button>
-          </Link>
-        </Flex>
+        <Flex justifyContent="center" mt={4}></Flex>
       </Box>
       <Box
         width={{ base: "100%", md: "50%" }} // Takes full width on small screens
