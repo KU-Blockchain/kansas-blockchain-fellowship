@@ -24,6 +24,7 @@ import austin_headshot from "../images/mentor_headshots/austin_adams.jpeg";
 import thomas_headshot from "../images/mentor_headshots/thomas_flynn.jpeg";
 import paige_headshot from "../images/mentor_headshots/paige_jones.jpeg";
 import samantha_headshot from "../images/mentor_headshots/samantha_mitra.jpeg";
+import nathan_headshot from "../images/mentor_headshots/nathan_schwermann.jpeg";
 
 import i2s from "../images/logos/i2s.png";
 import dragonChain from "../images/logos/dragonchain.png";
@@ -38,6 +39,7 @@ import apex_fusion from "../images/logos/apex_fusion.jpeg";
 import iohk from "../images/logos/iohk.jpeg";
 import solana from "../images/logos/solana.png";
 import spheron from "../images/logos/spheron_network.jpeg";
+import ebisu_bay from "../images/logos/ebisu_bay.png";
 
 const Mentors = () => {
   const [selectedMentor, setSelectedMentor] = useState(null);
@@ -124,6 +126,15 @@ const Mentors = () => {
       shortBio:
         "Daniel is a tech-enabled young professional who is passionate about challenging the status quo and driving forward a positive disruption.",
       bio: "Daniel is a tech-enabled young professional who is passionate about challenging the status quo and driving forward a positive disruption. He enjoys building communities around common interests, educating and learning about emerging technologies, and engaging with new opportunities all the time.",
+    },
+    {
+      headshot: nathan_headshot,
+      name: "Nathan Schwermann",
+      title: "Founder & CEO of Ebisu`s Bay",
+      company_logo: ebisu_bay,
+      shortBio:
+        "Nathan founded and built one of the most groundbreaking GameFi platforms ever built. He is KU Alumni.",
+      bio: "Nathan founded and built one of the most ground breaking GameFi platforms ever built. He is KU Alumni.",
     },
     {
       headshot: jennifer_headshot,
