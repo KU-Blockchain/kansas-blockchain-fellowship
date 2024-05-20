@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Resources from "./pages/Resources";
+import Syllabus from "./pages/Syllabus";
+import Directory from "./pages/Directory";
 
 import { Box, Image } from "@chakra-ui/react";
 import Home from "./pages/Home";
@@ -24,6 +26,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/resources" element={<Resources />} />
+          <Route path="/dashboard/directory" element={<Directory />} />
+          <Route path="/dashboard/syllabus" element={<Syllabus />} />
         </Routes>
       </Router>
     </Box>

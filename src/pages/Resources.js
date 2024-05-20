@@ -1,12 +1,10 @@
 import React from "react";
-import DashboardNavbar from "../components/After_auth/DashboardNavbar";
 
 import { Box, Text, Image } from "@chakra-ui/react";
 
 function Resources() {
   return (
     <>
-      <DashboardNavbar />
       <Box textAlign="center" py={10}>
         <Text fontSize="xl" mt={5} fontWeight="bold" mx={6}>
           Resources
