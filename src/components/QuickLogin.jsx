@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function QuickLogin() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ function QuickLogin() {
       document.body.appendChild(script);
     };
 
-    const initializeQuickLogin = () => {
+    const initializeQuickLogin = async () => {
       const existingButtons = document.querySelectorAll("div[data-quicklogin]");
       existingButtons.forEach((button) =>
         button.parentNode.removeChild(button)
@@ -41,20 +42,93 @@ function QuickLogin() {
       buttonContainer.style.display = "flex";
       buttonContainer.style.justifyContent = "center";
       buttonContainer.style.alignItems = "center";
-      buttonContainer.style.padding = "40px"; // Increased padding
-      buttonContainer.style.backgroundColor = "white"; // Temporarily set a semi-transparent white background
+      buttonContainer.style.padding = "40px";
+      buttonContainer.style.backgroundColor = "white";
 
-      if (window.QuickLogin) {
-        window.QuickLogin.createQuickLogin({
-          container: buttonContainer,
-          apiKey: process.env.REACT_APP_HEIRLOOM_API_KEY,
-          onQuickLoginSuccess: (authToken) => {
-            console.log("Authentication successful.", authToken);
-            navigate("/dashboard");
-          },
-        });
-      } else {
-        console.error("QuickLogin is not available on window.");
+      const apiKey = process.env.REACT_APP_HEIRLOOM_API_KEY;
+      const lockId = process.env.REACT_APP_HEIRLOOM_LOCK_ID;
+
+      if (!apiKey || !lockId) {
+        console.error("API Key or Lock ID is missing.");
+        return;
+      }
+
+      try {
+        const response = await axios.get(
+          "https://api.heirloom.io/auth/sessions/challenges",
+          {
+            headers: {
+              "X-Heirloom-API-Version": "1",
+              "X-Heirloom-API-Key": apiKey,
+              "X-Heirloom-Lock-ID": lockId,
+            },
+          }
+        );
+
+        const loginChallenge = response.data.loginChallenge;
+
+        if (window.QuickLogin) {
+          window.QuickLogin.createQuickLogin({
+            container: buttonContainer,
+            apiKey,
+            lock: {
+              lockId,
+              loginChallenge,
+            },
+            onQuickLoginSuccess: (authToken) => {
+              console.log("Authentication successful.", authToken);
+              navigate("/dashboard");
+            },
+            onQuickLoginError: (error) => {
+              console.error("Authentication failed.", error);
+            },
+          });
+
+          const socket = new WebSocket(
+            `wss://api.heirloom.io?apiKey=${apiKey}&lockId=${lockId}&jwtChallenge=${loginChallenge}`
+          );
+
+          socket.onopen = () => {
+            console.log("WebSocket connection established.");
+
+            // Subscribe to the topic
+            const topic = `tokens:${apiKey}:${lockId}:${loginChallenge}`;
+            socket.send(
+              JSON.stringify({
+                action: "subscribe",
+                topic: topic,
+              })
+            );
+          };
+
+          socket.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            if (data.authToken) {
+              console.log("Authentication successful.", data.authToken);
+              navigate("/dashboard");
+            } else {
+              console.error("Unexpected WebSocket message:", data);
+            }
+          };
+
+          socket.onerror = (event) => {
+            console.error("WebSocket error:", event);
+          };
+
+          socket.onclose = (event) => {
+            if (event.wasClean) {
+              console.log(
+                `WebSocket closed cleanly, code=${event.code}, reason=${event.reason}`
+              );
+            } else {
+              console.error("WebSocket connection closed unexpectedly.", event);
+            }
+          };
+        } else {
+          console.error("QuickLogin is not available on window.");
+        }
+      } catch (error) {
+        console.error("Failed to get login challenge:", error);
       }
     };
 

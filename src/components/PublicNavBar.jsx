@@ -35,7 +35,7 @@ function PublicNavbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const location = useLocation();
   const isMobile = useBreakpointValue({ base: true, md: false });
-  const onDashboard = location.pathname === "/dashboard"; // Check if the current route is the dashboard
+  const onDashboard = location.pathname.startsWith("/dashboard");
 
   const ColorModeSwitcher = () => {
     return (
@@ -45,6 +45,63 @@ function PublicNavbar() {
     );
   };
 
+  const dashboardLinks = (
+    <>
+      <ChakraLink as={Link} to="/dashboard/resources" sx={linkStyle}>
+        Resources
+      </ChakraLink>
+      <ChakraLink as={Link} to="/dashboard/directory" sx={linkStyle}>
+        Directory
+      </ChakraLink>
+      <ChakraLink as={Link} to="/dashboard/syllabus" sx={linkStyle}>
+        Syllabus
+      </ChakraLink>
+    </>
+  );
+
+  const publicLinks = (
+    <>
+      <ChakraLink as={Link} to="/about" sx={linkStyle}>
+        About
+      </ChakraLink>
+      <ChakraLink as={Link} to="/sponsorships" sx={linkStyle}>
+        Sponsorships
+      </ChakraLink>
+      <ChakraLink as={Link} to="/applications" sx={linkStyle}>
+        Applications
+      </ChakraLink>
+      <ChakraLink as={Link} to="/login" sx={linkStyle}>
+        Login
+      </ChakraLink>
+    </>
+  );
+
+  const allLinks = (
+    <>
+      <MenuItem as={Link} to="/dashboard/resources">
+        Resources
+      </MenuItem>
+      <MenuItem as={Link} to="/dashboard/directory">
+        Directory
+      </MenuItem>
+      <MenuItem as={Link} to="/dashboard/syllabus">
+        Syllabus
+      </MenuItem>
+      <MenuItem as={Link} to="/about">
+        About
+      </MenuItem>
+      <MenuItem as={Link} to="/sponsorships">
+        Sponsorships
+      </MenuItem>
+      <MenuItem as={Link} to="/applications">
+        Applications
+      </MenuItem>
+      <MenuItem as={Link} to="/login">
+        Login
+      </MenuItem>
+    </>
+  );
+
   return (
     <Flex
       as="nav"
@@ -52,7 +109,11 @@ function PublicNavbar() {
       justify="space-between"
       wrap="wrap"
       padding="1rem"
-      bgGradient="linear(to-r, orange.500, pink.500)"
+      bgGradient={
+        onDashboard
+          ? "linear(to-r, pink.500, purple.500)"
+          : "linear(to-r, orange.500, pink.500)"
+      }
       color="white"
     >
       <Flex align="center">
@@ -63,7 +124,7 @@ function PublicNavbar() {
           </Text>
         </ChakraLink>
       </Flex>
-      {isMobile || onDashboard ? (
+      {isMobile ? (
         <Menu>
           <MenuButton
             as={IconButton}
@@ -72,40 +133,67 @@ function PublicNavbar() {
             color="white"
           />
           <MenuList>
-            <MenuItem as={Link} to="/about">
-              About
-            </MenuItem>
-            <MenuItem as={Link} to="/sponsorships">
-              Sponsorships
-            </MenuItem>
-            <MenuItem as={Link} to="/applications">
-              Applications
-            </MenuItem>
-            <MenuItem as={Link} to="/login">
-              Login
-            </MenuItem>
-            <MenuItem>
-              <ColorModeSwitcher as={Link} />
-            </MenuItem>
-            {/* Add more navigation links as needed */}
+            {onDashboard ? (
+              <>
+                {allLinks}
+                <MenuItem>
+                  <ColorModeSwitcher />
+                </MenuItem>
+              </>
+            ) : (
+              <>
+                <MenuItem as={Link} to="/about">
+                  About
+                </MenuItem>
+                <MenuItem as={Link} to="/sponsorships">
+                  Sponsorships
+                </MenuItem>
+                <MenuItem as={Link} to="/applications">
+                  Applications
+                </MenuItem>
+                <MenuItem as={Link} to="/login">
+                  Login
+                </MenuItem>
+                <MenuItem>
+                  <ColorModeSwitcher />
+                </MenuItem>
+              </>
+            )}
           </MenuList>
         </Menu>
       ) : (
         <Box display="flex" alignItems="center">
-          <ChakraLink as={Link} to="/about" sx={linkStyle}>
-            About
-          </ChakraLink>
-          <ChakraLink as={Link} to="/sponsorships" sx={linkStyle}>
-            Sponsorships
-          </ChakraLink>
-          <ChakraLink as={Link} to="/applications" sx={linkStyle}>
-            Applications
-          </ChakraLink>
-          <ChakraLink as={Link} to="/login" sx={linkStyle}>
-            Login
-          </ChakraLink>
-          <ColorModeSwitcher />
-          {/* Add more navigation links as needed */}
+          {onDashboard ? (
+            <>
+              {dashboardLinks}
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  icon={<HamburgerIcon />}
+                  variant="outline"
+                  color="white"
+                  ml={2}
+                />
+                <MenuList>
+                  <MenuItem as={Link} to="/about">
+                    About
+                  </MenuItem>
+                  <MenuItem as={Link} to="/sponsorships">
+                    Sponsorships
+                  </MenuItem>
+                  <MenuItem as={Link} to="/applications">
+                    Applications
+                  </MenuItem>
+                  <MenuItem as={Link} to="/login">
+                    Login
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </>
+          ) : (
+            publicLinks
+          )}
+          {!isMobile && !onDashboard && <ColorModeSwitcher />}
         </Box>
       )}
     </Flex>
