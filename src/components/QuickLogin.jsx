@@ -113,6 +113,18 @@ function QuickLogin() {
 
           socket.onerror = (event) => {
             console.error("WebSocket error:", event);
+            // More detailed error handling
+            if (event.target instanceof WebSocket) {
+              const ws = event.target;
+              console.error(`WebSocket URL: ${ws.url}`);
+              console.error(`WebSocket readyState: ${ws.readyState}`);
+            }
+            if (event.message) {
+              console.error(`Error message: ${event.message}`);
+            }
+            if (event.type) {
+              console.error(`Error type: ${event.type}`);
+            }
           };
 
           socket.onclose = (event) => {
@@ -122,6 +134,8 @@ function QuickLogin() {
               );
             } else {
               console.error("WebSocket connection closed unexpectedly.", event);
+              console.error(`Close code: ${event.code}`);
+              console.error(`Close reason: ${event.reason}`);
             }
           };
         } else {
