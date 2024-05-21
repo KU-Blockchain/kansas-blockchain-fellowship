@@ -55,7 +55,7 @@ function QuickLogin() {
 
       try {
         const response = await axios.get(
-          "https://api.heirloom.io/auth/sessions/challenges",
+          `https://kbf-dashboard.herokuapp.com/https://api.heirloom.io/auth/sessions/challenges`,
           {
             headers: {
               "X-Heirloom-API-Version": "1",
@@ -85,13 +85,12 @@ function QuickLogin() {
           });
 
           const socket = new WebSocket(
-            `wss://api.heirloom.io?apiKey=${apiKey}&lockId=${lockId}&jwtChallenge=${loginChallenge}`
+            `wss://kbf-dashboard.herokuapp.com/https://api.heirloom.io?apiKey=${apiKey}&lockId=${lockId}&jwtChallenge=${loginChallenge}`
           );
 
           socket.onopen = () => {
             console.log("WebSocket connection established.");
 
-            // Subscribe to the topic
             const topic = `tokens:${apiKey}:${lockId}:${loginChallenge}`;
             socket.send(
               JSON.stringify({
@@ -113,7 +112,6 @@ function QuickLogin() {
 
           socket.onerror = (event) => {
             console.error("WebSocket error:", event);
-            // More detailed error handling
             if (event.target instanceof WebSocket) {
               const ws = event.target;
               console.error(`WebSocket URL: ${ws.url}`);

@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
 import QuickLogin from "../components/QuickLogin";
+import QuickLoginTest from "../components/QuickLoginTest";
 
 function Login() {
   return (
@@ -26,7 +27,8 @@ function Login() {
         alignItems="center"
         id="quicklogin-container"
       >
-        <QuickLogin />
+        {/* <QuickLogin /> */}
+        <QuickLoginTest />
       </Box>
     </Box>
   );
