@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useAuth } from "../contexts/AuthContext";
 
 function QuickLogin() {
   const navigate = useNavigate();
   const scriptId = "quicklogin-sdk";
   const buttonContainerId = "quicklogin-container";
+  const { verifyUser } = useAuth();
 
   useEffect(() => {
     const loadQuickLoginSDK = () => {
@@ -17,13 +18,14 @@ function QuickLogin() {
       const script = document.createElement("script");
       script.id = scriptId;
       script.src =
-        "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.1.1/dist/quicklogin.js";
-      script.onload = () => setTimeout(initializeQuickLogin, 100);
+        "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.2.0/dist/quicklogin.js";
+      script.onload = () => setTimeout(initializeQuickLogin(verifyUser), 100);
       document.body.appendChild(script);
     };
 
-    const initializeQuickLogin = async () => {
+    const initializeQuickLogin = (verifyUser) => {
       const existingButtons = document.querySelectorAll("div[data-quicklogin]");
+      
       existingButtons.forEach((button) =>
         button.parentNode.removeChild(button)
       );
@@ -42,105 +44,25 @@ function QuickLogin() {
       buttonContainer.style.display = "flex";
       buttonContainer.style.justifyContent = "center";
       buttonContainer.style.alignItems = "center";
-      buttonContainer.style.padding = "40px";
-      buttonContainer.style.backgroundColor = "white";
+      buttonContainer.style.padding = "40px"; // Increased padding
+      buttonContainer.style.backgroundColor = "white"; // Temporarily set a semi-transparent white background
 
       const apiKey = process.env.REACT_APP_HEIRLOOM_API_KEY;
       const lockId = process.env.REACT_APP_HEIRLOOM_LOCK_ID;
 
-      if (!apiKey || !lockId) {
-        console.error("API Key or Lock ID is missing.");
-        return;
-      }
-
-      try {
-        const response = await axios.get(
-          `https://kbf-dashboard.herokuapp.com/https://api.heirloom.io/auth/sessions/challenges`,
-          {
-            headers: {
-              "X-Heirloom-API-Version": "1",
-              "X-Heirloom-API-Key": apiKey,
-              "X-Heirloom-Lock-ID": lockId,
-            },
-          }
-        );
-
-        const loginChallenge = response.data.loginChallenge;
-
-        if (window.QuickLogin) {
-          window.QuickLogin.createQuickLogin({
-            container: buttonContainer,
-            apiKey,
-            lock: {
-              lockId,
-              loginChallenge,
-            },
-            onQuickLoginSuccess: (authToken) => {
-              console.log("Authentication successful.", authToken);
-              navigate("/dashboard");
-            },
-            onQuickLoginError: (error) => {
-              console.error("Authentication failed.", error);
-            },
-          });
-
-          const socket = new WebSocket(
-            `wss://kbf-dashboard.herokuapp.com/https://api.heirloom.io?apiKey=${apiKey}&lockId=${lockId}&jwtChallenge=${loginChallenge}`
-          );
-
-          socket.onopen = () => {
-            console.log("WebSocket connection established.");
-
-            const topic = `tokens:${apiKey}:${lockId}:${loginChallenge}`;
-            socket.send(
-              JSON.stringify({
-                action: "subscribe",
-                topic: topic,
-              })
-            );
-          };
-
-          socket.onmessage = (event) => {
-            const data = JSON.parse(event.data);
-            if (data.authToken) {
-              console.log("Authentication successful.", data.authToken);
-              navigate("/dashboard");
-            } else {
-              console.error("Unexpected WebSocket message:", data);
-            }
-          };
-
-          socket.onerror = (event) => {
-            console.error("WebSocket error:", event);
-            if (event.target instanceof WebSocket) {
-              const ws = event.target;
-              console.error(`WebSocket URL: ${ws.url}`);
-              console.error(`WebSocket readyState: ${ws.readyState}`);
-            }
-            if (event.message) {
-              console.error(`Error message: ${event.message}`);
-            }
-            if (event.type) {
-              console.error(`Error type: ${event.type}`);
-            }
-          };
-
-          socket.onclose = (event) => {
-            if (event.wasClean) {
-              console.log(
-                `WebSocket closed cleanly, code=${event.code}, reason=${event.reason}`
-              );
-            } else {
-              console.error("WebSocket connection closed unexpectedly.", event);
-              console.error(`Close code: ${event.code}`);
-              console.error(`Close reason: ${event.reason}`);
-            }
-          };
-        } else {
-          console.error("QuickLogin is not available on window.");
-        }
-      } catch (error) {
-        console.error("Failed to get login challenge:", error);
+      if (window.QuickLogin) {
+        window.QuickLogin.createQuickLogin({
+          container: buttonContainer,
+          apiKey: apiKey,
+          lockId: lockId,
+          onQuickLoginSuccess: (authToken) => {
+            console.log("Authentication successful.", authToken);
+            verifyUser(authToken);
+            navigate("/dashboard");
+          },
+        });
+      } else {
+        console.error("QuickLogin is not available on window.");
       }
     };
 
@@ -156,7 +78,7 @@ function QuickLogin() {
         buttonContainer.parentNode.removeChild(buttonContainer);
       }
     };
-  }, [navigate]);
+  }, [navigate, verifyUser]);
 
   return null;
 }
