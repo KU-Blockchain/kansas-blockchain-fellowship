@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-function QuickLogin() {
+function QuickLoginTest() {
   const navigate = useNavigate();
   const scriptId = "quicklogin-sdk";
   const buttonContainerId = "quicklogin-container";
@@ -19,11 +19,11 @@ function QuickLogin() {
       script.id = scriptId;
       script.src =
         "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.2.0/dist/quicklogin.js";
-      script.onload = () => setTimeout(initializeQuickLogin(verifyUser), 100);
+      script.onload = () => setTimeout(initializeQuickLogin, 100);
       document.body.appendChild(script);
     };
 
-    const initializeQuickLogin = (verifyUser) => {
+    const initializeQuickLogin = () => {
       const existingButtons = document.querySelectorAll("div[data-quicklogin]");
       
       existingButtons.forEach((button) =>
@@ -83,4 +83,4 @@ function QuickLogin() {
   return null;
 }
 
-export default QuickLogin;
+export default QuickLoginTest;
