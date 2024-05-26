@@ -17,6 +17,7 @@ const Mentor = ({
   shortBio,
   linkedin,
   otherLinks,
+  howToContact,
 }) => {
   const isSmallScreen = useBreakpointValue({ base: true, md: false });
 
@@ -30,7 +31,7 @@ const Mentor = ({
             boxSize="200px"
             objectFit="cover"
           />
-          <VStack align="start" spacing={3} w="full">
+          <VStack spacing={3} w="full">
             <Text fontSize="xl" fontWeight="bold">
               {name}
             </Text>
@@ -43,16 +44,19 @@ const Mentor = ({
             <Text fontSize="md" fontWeight="semibold">
               {title}
             </Text>
-            <Text fontSize="sm">{shortBio}</Text>
-            <Text fontSize="sm">
-              Please contact me on{" "}
+            <Text fontSize="md" marginX={"20px"}>
+              {shortBio}
+            </Text>
+            <Text fontSize="md" color="purple.200" fontWeight="bold">
+              To contact, {howToContact}
+            </Text>
+            <Text fontSize="lg">
               <Link href={linkedin} color="blue.500" isExternal>
                 LinkedIn
               </Link>
-              .
             </Text>
             {otherLinks && otherLinks.length > 0 && (
-              <VStack align="start" spacing={1}>
+              <VStack spacing={1}>
                 {otherLinks.map((link, index) => (
                   <Link key={index} href={link.url} color="blue.500" isExternal>
                     {link.title}
@@ -70,7 +74,7 @@ const Mentor = ({
             boxSize="200px"
             objectFit="cover"
           />
-          <VStack align="start" spacing={3} w="full">
+          <VStack spacing={3} w="full">
             <Text fontSize="xl" fontWeight="bold">
               {name}
             </Text>
@@ -83,16 +87,19 @@ const Mentor = ({
             <Text fontSize="md" fontWeight="semibold">
               {title}
             </Text>
-            <Text fontSize="sm">{shortBio}</Text>
-            <Text fontSize="sm">
-              Please contact me on{" "}
+            <Text fontSize="md" marginX={"20px"}>
+              {shortBio}
+            </Text>
+            <Text fontSize="md" color="purple.200" fontWeight="bold">
+              To contact, {howToContact}
+            </Text>
+            <Text fontSize="lg">
               <Link href={linkedin} color="blue.500" isExternal>
                 LinkedIn
               </Link>
-              .
             </Text>
             {otherLinks && otherLinks.length > 0 && (
-              <VStack align="start" spacing={1}>
+              <VStack spacing={1}>
                 {otherLinks.map((link, index) => (
                   <Link key={index} href={link.url} color="blue.500" isExternal>
                     {link.title}

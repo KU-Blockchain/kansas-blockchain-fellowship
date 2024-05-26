@@ -38,6 +38,7 @@ const mentors = [
     shortBio:
       "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     linkedin: "https://www.linkedin.com/in/austin-adams/",
+    howToContact: "Paige prefers to be contacted via Telegram or email",
     otherLinks: [
       { title: "Personal Website", url: "https://austin-website.com" },
       { title: "GitHub", url: "https://github.com/austin" },
@@ -51,6 +52,7 @@ const mentors = [
     shortBio:
       "Paige is a builder and a maker. She loves developing web3 applications that solve real world problems by providing thoughtful and creative solutions. She is a KU Alumna.",
     linkedin: "https://www.linkedin.com/in/paige-jones/",
+    howToContact: "Paige prefers to be contacted via Telegram or email",
     otherLinks: [
       { title: "Personal Blog", url: "https://paige-blog.com" },
       { title: "Twitter", url: "https://twitter.com/paige" },
@@ -75,6 +77,7 @@ function Directory() {
             shortBio={mentor.shortBio}
             linkedin={mentor.linkedin}
             otherLinks={mentor.otherLinks}
+            howToContact={mentor.howToContact}
           />
         ))}
       </VStack>
