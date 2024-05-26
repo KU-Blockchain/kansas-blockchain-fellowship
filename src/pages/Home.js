@@ -9,6 +9,7 @@ import WindmillImage from "../components/WindmillImage";
 import ThreeCircles from "../components/ThreeCircles";
 import Footer from "../components/Footer";
 import Eligibility from "../components/Eligibility";
+import Fellows from "../components/Fellows";
 import ProgramOutline from "../components/ProgramOutline";
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
       <About />
       {/* <ThreeCircles /> */}
       <Mentors />
+      <Fellows />
       <ProgramOutline />
       <Team />
       <WindmillImage />
