@@ -47,7 +47,7 @@ function ProgramOutline() {
           Program Outline
         </Text>
         <Text mt={3} fontSize="md">
-          The Fellowship will consist of:
+          The Fellowship consists of:
         </Text>
 
         <UnorderedList mt={7} ml={5} fontSize="md">

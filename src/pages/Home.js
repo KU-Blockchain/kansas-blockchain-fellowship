@@ -21,9 +21,11 @@ function Home() {
       {/* <ThreeCircles /> */}
       <Mentors />
       <Fellows />
-      <ProgramOutline />
+
       <Team />
+
       <WindmillImage />
+      <ProgramOutline />
       <Footer />
     </Box>
   );

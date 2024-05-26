@@ -120,8 +120,9 @@ const Fellows = () => {
       headshot: jay_headshot,
       field_of_study: "Junior in Computer Science",
       name: "Jay Patel",
-      shortBio: "Junior in Computer Science",
-      bio: "Junior in Computer Science",
+      shortBio:
+        "Jay Patel is a rising Junior at the University of Kansas from Gujarat, India. He is majoring in Computer Science. He is incredibly excited to build a blockchain project through the Kansas Blockchain Fellowship and aims to gain immense new knowledge through his first decentralized project.",
+      bio: "Jay Patel is a rising Junior at the University of Kansas from Gujarat, India. He is majoring in Computer Science. He is incredibly excited to build a blockchain project through the Kansas Blockchain Fellowship and aims to gain immense new knowledge through his first decentralized project.",
     },
     {
       headshot: eli_headshot,
@@ -129,44 +130,49 @@ const Fellows = () => {
         "High School Senior | Founder of Computer Science Honors Society at Washburn Rural High School",
       name: "Eli Chapman",
       shortBio:
-        "High School Senior | Founder of Computer Science Honors Society at Washburn Rural High School",
+        "Eli Chapman is a High School Senior from Topeka, Kansas interested in furthering his knowledge of computer science systems. He has worked with Web Development, earning 2nd place at KUs 2022 Design Competition with a website he made with a partner. Additionally, he founded and led the Computer Science Honors Society at his school to increase early exposure to programming in elementary and middle schoolers. Community is extremely important to him, and he is excited to find new applications for blockchain technology in communities and systems where it will have substantial impact.",
 
-      bio: "High School Senior | Founder of Computer Science Honors Society at Washburn Rural High School",
+      bio: "Eli Chapman is a High School Senior from Topeka, Kansas interested in furthering his knowledge of computer science systems. He has worked with Web Development, earning 2nd place at KUs 2022 Design Competition with a website he made with a partner. Additionally, he founded and led the Computer Science Honors Society at his school to increase early exposure to programming in elementary and middle schoolers. Community is extremely important to him, and he is excited to find new applications for blockchain technology in communities and systems where it will have substantial impact.",
     },
     {
       headshot: noor_headshot,
       field_of_study: "Final Year Business Analytics Student",
       name: "Noor Syed",
-      shortBio: "Final Year Business Analytics Student",
-      bio: "Final Year Business Analytics Student",
+      shortBio:
+        "Noor Syed is in her final year at the University of Kansas, completing a Bachelor of Science in Business Analytics. She is a self-starter, eager to learn more and committed to doing her best everyday. She has applied her passion of helping others discover the stories behind raw data to her past Business Analytics internship at PepsiCo and Data Analyst role at Yellow Bug Creative.",
+      bio: "Noor Syed is in her final year at the University of Kansas, completing a Bachelor of Science in Business Analytics. She is a self-starter, eager to learn more and committed to doing her best everyday. She has applied her passion of helping others discover the stories behind raw data to her past Business Analytics internship at PepsiCo and Data Analyst role at Yellow Bug Creative.",
     },
     {
       headshot: shivansh_headshot,
       field_of_study: "Junior in Computer Engineering & Cybersecurity",
       name: "Shivansh Shrivas",
-      shortBio: "Junior in Computer Engineering & Cybersecurity",
-      bio: "Junior in Computer Engineering & Cybersecurity",
+      shortBio:
+        "Shivansh Shrivas is an incoming Junior at the University of Kansas studying Computer Engineering and Cybersecurity. Shivanshs interests lie primarily in embedded systems, software development, and cybersecurity. One of his recent projects is from HackKU ’24, where he and his team built a social-good themed social media application using the MERN stack, designed to incentivize younger generations to be involved in their communities.",
+      bio: "Shivansh Shrivas is an incoming Junior at the University of Kansas studying Computer Engineering and Cybersecurity. Shivanshs interests lie primarily in embedded systems, software development, and cybersecurity. One of his recent projects is from HackKU ’24, where he and his team built a social-good themed social media application using the MERN stack, designed to incentivize younger generations to be involved in their communities.",
     },
     {
       headshot: ramesh_headshot,
       field_of_study: "Final Year Graduate Student in Computer Science",
       name: "Ramesh Solasa",
-      shortBio: "Final Year Graduate Student in Computer Science",
-      bio: "Final Year Graduate Student in Computer Science",
+      shortBio:
+        "Ramesh Solasa is in his final year graduate student at the University of Kansas pursuing Computer Science at the Indian Institute of Technology Dhanbad. Achieving a remarkable rank of 5100 among one million students, Ramesh earned his place at the prestigious Indian Institute of Technology Dhanbad, where he pursued his Bachelors degree in engineering.",
+      bio: "Ramesh Solasa is in his final year graduate student at the University of Kansas pursuing Computer Science at the Indian Institute of Technology Dhanbad. Achieving a remarkable rank of 5100 among one million students, Ramesh earned his place at the prestigious Indian Institute of Technology Dhanbad, where he pursued his Bachelors degree in engineering.",
     },
     {
       headshot: rahul_headshot,
       field_of_study: "Senior in Finance",
       name: "Rahul Desai",
-      shortBio: "Senior in Finance",
-      bio: "Senior in Finance",
+      shortBio:
+        "Rahul Desai is a senior at the University of Kansas pursuing a Bachelor of Science in Finance. He is from Overland Park, Kansas. Rahul aspires to become a Financial Analyst and pursue a career in asset management or private equity. Through his internships and part-time jobs, Rahul has developed strong leadership, financial analysis, modeling, and risk assessment skills.",
+      bio: "Rahul Desai is a senior at the University of Kansas pursuing a Bachelor of Science in Finance. He is from Overland Park, Kansas. Rahul aspires to become a Financial Analyst and pursue a career in asset management or private equity. Through his internships and part-time jobs, Rahul has developed strong leadership, financial analysis, modeling, and risk assessment skills.",
     },
     {
       headshot: kyle_headshot,
       field_of_study: "Junior in Computer Science & Business",
       name: "Kyle Spragg",
-      shortBio: "Junior in Computer Science & Business",
-      bio: "Junior in Computer Science & Business",
+      shortBio:
+        "Kyle Spragg will be a third year student at the University of Kansas this fall, studying Computer Science and Business. He is from Naperville, Illinois, and participates in athletics. He became an Academic All-American in his fourth year of high school sports, and pursued club lacrosse in college. Currently, Kyle is the Vice President of the Kansas Lacrosse Team and a Financial Analyst for the Rock Chalk Investment Club.",
+      bio: "Kyle Spragg will be a third year student at the University of Kansas this fall, studying Computer Science and Business. He is from Naperville, Illinois, and participates in athletics. He became an Academic All-American in his fourth year of high school sports, and pursued club lacrosse in college. Currently, Kyle is the Vice President of the Kansas Lacrosse Team and a Financial Analyst for the Rock Chalk Investment Club.",
     },
   ];
 
