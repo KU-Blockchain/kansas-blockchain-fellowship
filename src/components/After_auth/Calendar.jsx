@@ -23,12 +23,11 @@ function Calendar() {
 
   return (
     <Box width="100%" padding="10">
-      {/* Embedding the Styled Calendar iframe */}
       <iframe
         src="https://embed.styledcalendar.com/#6vX0l2477FGal4mX2fm8"
         title="Styled Calendar"
         className="styled-calendar-container"
-        style={{ width: "100%", border: "none" }}
+        style={{ width: "100%", height: "500px", border: "none" }} // Set height here
         data-cy="calendar-embed-iframe"
       />
     </Box>
