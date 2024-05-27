@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
-function QuickLogin() {
+function QuickLoginTest() {
   const navigate = useNavigate();
   const scriptId = "quicklogin-sdk";
   const buttonContainerId = "quicklogin-container";
+  const { verifyUser } = useAuth();
 
   useEffect(() => {
     const loadQuickLoginSDK = () => {
@@ -23,6 +25,7 @@ function QuickLogin() {
 
     const initializeQuickLogin = () => {
       const existingButtons = document.querySelectorAll("div[data-quicklogin]");
+
       existingButtons.forEach((button) =>
         button.parentNode.removeChild(button)
       );
@@ -54,6 +57,7 @@ function QuickLogin() {
           lockId: lockId,
           onQuickLoginSuccess: (authToken) => {
             console.log("Authentication successful.", authToken);
+            verifyUser(authToken);
             navigate("/dashboard");
           },
         });
@@ -74,9 +78,9 @@ function QuickLogin() {
         buttonContainer.parentNode.removeChild(buttonContainer);
       }
     };
-  }, [navigate]);
+  }, [navigate, verifyUser]);
 
   return null;
 }
 
-export default QuickLogin;
+export default QuickLoginTest;
