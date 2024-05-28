@@ -1,13 +1,7 @@
 import React from "react";
 import { VStack, Text, Link, Box, Button } from "@chakra-ui/react";
 
-const Assignment = ({
-  title,
-  description,
-  dueDate,
-  otherLinks,
-  submissionlink,
-}) => {
+const Assignment = ({ title, description, dueDate, links, submissionlink }) => {
   return (
     <Box
       align="stretch"
@@ -26,22 +20,12 @@ const Assignment = ({
       <Text fontWeight="extrabold" color="purple.700">
         Due {dueDate}
       </Text>
-      <Text fontSize="md" color="black">
+      <Text fontSize="md" pb="10px" color="black">
         {description}
       </Text>
-      <Button
-        color="black"
-        href={submissionlink}
-        as={Link}
-        isExternal
-        colorScheme="blue"
-        variant="outline"
-        mb={2}
-      >
-        Instructions & Submission
-      </Button>
+
       <VStack spacing={2}>
-        {otherLinks.map((link, index) => (
+        {links.map((link, index) => (
           <Button
             color="black"
             key={index}

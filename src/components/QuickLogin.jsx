@@ -40,7 +40,7 @@ function QuickLoginTest() {
       buttonContainer.style.position = "absolute";
       buttonContainer.style.left = "50%";
       buttonContainer.style.transform = "translateX(-50%)";
-      buttonContainer.style.width = "50%";
+      buttonContainer.style.width = "70%";
       buttonContainer.style.display = "flex";
       buttonContainer.style.justifyContent = "center";
       buttonContainer.style.alignItems = "center";

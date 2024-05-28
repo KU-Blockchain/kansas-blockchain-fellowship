@@ -12,7 +12,7 @@ function Dashboard() {
         <Text fontSize="xxxl" mt={5} fontWeight="bold">
           Welcome!
         </Text>
-        <Text mt={4} mx="auto" maxWidth="80%" textColor="gray.400">
+        <Text mt={4} mx="auto" maxWidth="90%" textColor="gray.300">
           Welcome to the Fellowship Dashboard. This platform is your homebase
           for all resources, links, and assignments. Please check this page
           regularly for upcoming deadlines and events.
@@ -31,7 +31,7 @@ function Dashboard() {
             <Assignments />
           </Box>
           <Box>
-            <Text fontSize="4xl" fontWeight="bold">
+            <Text fontSize="xxxl" fontWeight="bold">
               Calendar
             </Text>
             <Calendar />

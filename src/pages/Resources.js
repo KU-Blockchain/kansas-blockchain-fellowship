@@ -10,7 +10,10 @@ function Resources() {
           Resources
         </Text>
 
-        <Text textColor="gray.400" mr={"15vh"} ml={"15vh"} mt={"30px"}></Text>
+        <Text textColor="gray.400" mx="auto" mt={"30px"}>
+          Throughout the summer, we will post class resources here, including
+          class recordings and supplemental articles and videos.{" "}
+        </Text>
       </Box>
     </>
   );
