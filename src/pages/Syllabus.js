@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Text, Heading, VStack, Divider, SimpleGrid, Link, Breadcrumb, BreadcrumbItem, BreadcrumbLink, UnorderedList, ListItem, Flex, HStack } from "@chakra-ui/react";
+import { Box, Text, Heading, VStack, Divider, SimpleGrid, Link, Breadcrumb, BreadcrumbItem, BreadcrumbLink, UnorderedList, ListItem, Flex, HStack, useBreakpointValue } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 function Syllabus() {
   const [isSticky, setSticky] = useState(false);
   const navRef = useRef(null);
   const sentinelRef = useRef(null);
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const handleScroll = () => {
     if (sentinelRef.current) {
@@ -46,8 +47,12 @@ function Syllabus() {
       <br></br>
 
       <Flex>
-      {/* Sidebar */}
-      <Box
+      
+      { /* Navigation */}
+      {isMobile ? (
+        null
+      ) : (
+        <Box
           as="nav"
           w="260px"
           py={4}
@@ -59,28 +64,29 @@ function Syllabus() {
           transition="top 0.3s"
           ref={navRef}
           flexShrink={0}
-      >
-        <VStack align="start" spacing={2}>
-          <Heading as="h1" size="md">Navigation</Heading>
-          <Link fontSize="md" href="#about-the-fellowship"><ChevronRightIcon />About</Link>
-          <Link fontSize="md" href="#objectives"><ChevronRightIcon />Objectives</Link>
-          <Link fontSize="md" href="#note-to-fellows"><ChevronRightIcon />Note</Link>
-          <Link fontSize="md" href="#responsibility"><ChevronRightIcon />Responsibility</Link>
-          <Link fontSize="md" href="#health-and-safety"><ChevronRightIcon />Health & Safety</Link>
-          <Link fontSize="md" href="#curriculum"><ChevronRightIcon />Curriculum</Link>
-          <Link fontSize="md" href="#mentorship"><ChevronRightIcon />Mentorship</Link>
-          <Link fontSize="md" href="#evaluation"><ChevronRightIcon />Evaluation</Link>
-          <Link fontSize="md" href="#quizzes"><ChevronRightIcon />Quizzes</Link>
-          <Link fontSize="md" href="#capstone-project"><ChevronRightIcon />Capstone</Link>
-          <Link fontSize="md" href="#scholarship"><ChevronRightIcon />Scholarship</Link>
-          <Link fontSize="md" href="#intellectual-property"><ChevronRightIcon />IP</Link>
-          <Link fontSize="md" href="#links"><ChevronRightIcon />Links</Link>
-        </VStack>
-      </Box>
+        >
+          <VStack align="start" spacing={2}>
+            <Heading as="h1" size="md">Navigation</Heading>
+            <Link fontSize="md" href="#about-the-fellowship"><ChevronRightIcon />About</Link>
+            <Link fontSize="md" href="#objectives"><ChevronRightIcon />Objectives</Link>
+            <Link fontSize="md" href="#note-to-fellows"><ChevronRightIcon />Note</Link>
+            <Link fontSize="md" href="#responsibility"><ChevronRightIcon />Responsibility</Link>
+            <Link fontSize="md" href="#health-and-safety"><ChevronRightIcon />Health & Safety</Link>
+            <Link fontSize="md" href="#curriculum"><ChevronRightIcon />Curriculum</Link>
+            <Link fontSize="md" href="#mentorship"><ChevronRightIcon />Mentorship</Link>
+            <Link fontSize="md" href="#evaluation"><ChevronRightIcon />Evaluation</Link>
+            <Link fontSize="md" href="#quizzes"><ChevronRightIcon />Quizzes</Link>
+            <Link fontSize="md" href="#capstone-project"><ChevronRightIcon />Capstone</Link>
+            <Link fontSize="md" href="#scholarship"><ChevronRightIcon />Scholarship</Link>
+            <Link fontSize="md" href="#intellectual-property"><ChevronRightIcon />IP</Link>
+            <Link fontSize="md" href="#links"><ChevronRightIcon />Links</Link>
+          </VStack>
+        </Box>
+      )}
 
       {/* Main Content */}
       <Box ml={isSticky ? '260px' : '0'} w="full">
-        <Box ref={sentinelRef} height="0"/> {/* Sentinel element to detect the top of the navRef */}
+        {isMobile ? ( null ) : ( <Box ref={sentinelRef} height="0"/> )} {/* Sentinel element to detect the top of the navRef */}
         <VStack spacing={10} align="stretch" p={4} id="syllabus-content">
           <SimpleGrid columns={[1, null, 2]} spacing={7}>
             <Box>

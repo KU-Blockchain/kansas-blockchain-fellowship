@@ -173,7 +173,14 @@ function PublicNavbar() {
                   icon={<HamburgerIcon />}
                   variant="outline"
                   color="white"
-                  ml={2}
+                  borderRadius="md"
+                  border="2px solid white"
+                  backgroundColor="rgba(255, 255, 255, 0.2)"
+                  _hover={{
+                    textDecoration: "none",
+                    backgroundColor: "white",
+                    color: "purple.600",
+                  }}
                 />
                 <MenuList>
                   <MenuItem as={Link} to="/about">
