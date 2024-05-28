@@ -40,7 +40,7 @@ function PublicNavbar() {
   const ColorModeSwitcher = () => {
     return (
       <Button onClick={toggleColorMode} sx={linkStyle}>
-        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        {colorMode === "light" ? <MoonIcon color="white" /> : <SunIcon />}
       </Button>
     );
   };
@@ -166,6 +166,7 @@ function PublicNavbar() {
           {onDashboard ? (
             <>
               {dashboardLinks}
+              <ColorModeSwitcher />
               <Menu>
                 <MenuButton
                   as={IconButton}
