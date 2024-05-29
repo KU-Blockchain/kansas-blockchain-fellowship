@@ -40,7 +40,7 @@ function PublicNavbar() {
   const ColorModeSwitcher = () => {
     return (
       <Button onClick={toggleColorMode} sx={linkStyle}>
-        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        {colorMode === "light" ? <MoonIcon color="white" /> : <SunIcon />}
       </Button>
     );
   };
@@ -172,13 +172,21 @@ function PublicNavbar() {
           {onDashboard ? (
             <>
               {dashboardLinks}
+              <ColorModeSwitcher />
               <Menu>
                 <MenuButton
                   as={IconButton}
                   icon={<HamburgerIcon />}
                   variant="outline"
                   color="white"
-                  ml={2}
+                  borderRadius="md"
+                  border="2px solid white"
+                  backgroundColor="rgba(255, 255, 255, 0.2)"
+                  _hover={{
+                    textDecoration: "none",
+                    backgroundColor: "white",
+                    color: "purple.600",
+                  }}
                 />
                 <MenuList>
                   <MenuItem as={Link} to="/about">

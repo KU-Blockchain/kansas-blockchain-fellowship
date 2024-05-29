@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState } from 'react';
-import io from 'socket.io-client';
 
 const AuthContext = createContext(null);
 
@@ -8,7 +7,7 @@ export const AuthProvider = ({ children }) => {
 
   const verifyUser = (authToken) => {
     setIsVerified(true);
-    console.log('User authenticated');
+    console.log('User authenticated with token:', authToken);
   };
 
   return (
