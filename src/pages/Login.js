@@ -12,27 +12,27 @@ function Login() {
         Click the Heirloom QuickLogin button below to login.
       </Text>
       <Box
-        mt={4}
-        p={5}
-        height="400px"
-        borderWidth="2px"
-        borderColor="orange"
-        borderRadius="lg"
-        backgroundColor="white"
-        maxW="sm"
-        mx="auto"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        id="quicklogin-container"
+      // mt={4}
+      // p={5}
+      // height="200px"
+      // borderWidth="2px"
+      // borderColor="orange"
+      // borderRadius="lg"
+      // backgroundColor="white"
+      // maxW="sm"
+      // mx="auto"
+      // display="flex"
+      // justifyContent="center"
+      // alignItems="center"
+      // id="quicklogin-container"
       >
         <QuickLogin />
       </Box>
-      <Text color="gray.400" fontSize="md" mx="8vh">
+      {/* <Text color="gray.400" fontSize="md" mx="8vh">
         If you are having trouble accessing your credential or logging in,
         please contact the KBF team or reach out to
         kansasblockchainfellowship@gmail.com.
-      </Text>
+      </Text> */}
     </Box>
   );
 }

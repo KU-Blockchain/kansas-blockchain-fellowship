@@ -44,7 +44,7 @@ function QuickLoginTest() {
       buttonContainer.style.display = "flex";
       buttonContainer.style.justifyContent = "center";
       buttonContainer.style.alignItems = "center";
-      buttonContainer.style.padding = "40px"; // Increased padding
+      buttonContainer.style.padding = "40px";
       buttonContainer.style.backgroundColor = "white"; // Temporarily set a semi-transparent white background
 
       const apiKey = process.env.REACT_APP_HEIRLOOM_API_KEY;
