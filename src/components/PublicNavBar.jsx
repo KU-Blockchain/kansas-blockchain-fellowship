@@ -47,6 +47,9 @@ function PublicNavbar() {
 
   const dashboardLinks = (
     <>
+      <ChakraLink as={Link} to="/dashboard" sx={linkStyle}>
+        Dashboard
+      </ChakraLink>
       <ChakraLink as={Link} to="/dashboard/resources" sx={linkStyle}>
         Resources
       </ChakraLink>
@@ -78,6 +81,9 @@ function PublicNavbar() {
 
   const allLinks = (
     <>
+      <MenuItem as={Link} to="/dashboard">
+        Dashboard
+      </MenuItem>
       <MenuItem as={Link} to="/dashboard/resources">
         Resources
       </MenuItem>

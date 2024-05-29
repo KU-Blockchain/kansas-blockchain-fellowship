@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { Box, Text, Heading, VStack, Divider, SimpleGrid, Link, Breadcrumb, BreadcrumbItem, BreadcrumbLink, UnorderedList, ListItem, Flex, HStack, useBreakpointValue } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+
 
 function Syllabus() {
   const [isSticky, setSticky] = useState(false);
@@ -23,6 +25,7 @@ function Syllabus() {
   }, []);
 
   return (
+
     <Box maxW="90vw" mx="auto" p={5}>
       <Heading as="h1" textAlign="center" mb={8}>
         Summer Learning Intensive: Blockchain
@@ -337,6 +340,7 @@ function Syllabus() {
       </Box>
     </Flex>
     </Box>
+
   );
 }
 

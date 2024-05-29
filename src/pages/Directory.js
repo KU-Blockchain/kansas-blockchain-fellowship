@@ -57,12 +57,14 @@ const mentors = [
       { title: "Personal Blog", url: "https://paige-blog.com" },
       { title: "Twitter", url: "https://twitter.com/paige" },
     ],
+    linkedin: "https://www.linkedin.com/in/paigexx/",
   },
   {
     headshot: thea_headshot,
     title: "Leading Talent Brand at Coinbase",
     name: "Thea Neal",
     company_logo: coinbase,
+    linkedin: "https://www.linkedin.com/in/nealthea/",
     shortBio:
       "Thea leads Talent Brand and Events at Coinbase. She has been featured in Forbes 30 under 30.",
     bio: "Thea leads Talent Brand and Events at Coinbase, the most world's most trusted way to join the crypto revolution. She has been featured in Forbes 30 under 30.",
@@ -76,16 +78,18 @@ const mentors = [
       "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer at Apple.",
     bio: "Former Solana Core Developer at Solana Labs. \nFormer Audio Embedded DSP Engineer (Interactive Media Group) at Apple. \nBS / MS Graduate of Computer Engineering / Electrical and Computer Engineering at Purdue University (Indianapolis Campus) 2013-2017. \nSpecialization in Computer Engineering and Signal Processing (both specialization requirements satisfied).",
     moreImages: [apple, solana],
+    linkedin: "https://www.linkedin.com/in/kevingaller/",
   },
   {
     headshot: thomas_headshot,
     title: "Core Contributor at Apex Fusion",
-    name: "Thomas Flynn",
+    name: "Tom Flynn",
     company_logo: apex_fusion,
     shortBio:
-      "Thomas is a core contributor at Apex Fusion, bringing experience from Spheron Network and Input Output (IOHK).",
-    bio: "Thomas is a core contributor at Apex Fusion. He is the former Head of Business Development U.S. at Spheron Network and Commercial Director at Input Output (IOHK).",
+      "Tom is a core contributor at Apex Fusion, bringing experience from Spheron Network and Input Output (IOHK).",
+    bio: "Tom is a core contributor at Apex Fusion. He is the former Head of Business Development U.S. at Spheron Network and Commercial Director at Input Output (IOHK).",
     moreImages: [iohk, spheron],
+    linkedin: "https://www.linkedin.com/in/thomas-flynn-4615128/",
   },
 
   {
@@ -97,12 +101,14 @@ const mentors = [
       "Joe is the Founder and CEO of Dragonchain, who has been a wonderful mentor in the KU Blockchain community.",
     bio: "Joe is the Founder and Chief Executive Officer of Dragonchain. He has over 20 years of experience in software architecture focusing on security and scalability. He has created and led multiple technology startups since the mid 1990s. He is a visionary and thought leader in blockchain technology having led or contributed to projects in the space since 2010 at companies such as Overstock, Coinbase, Lockheed Martin, & the Walt Disney Company.",
     moreImages: [disney],
+    linkedin: "https://www.linkedin.com/in/j0j0r0/",
   },
   {
     headshot: samantha_headshot,
     title: "Policy and Legal at Uniswap",
     name: "Samantha Deori-Mitra",
     company_logo: uniswap,
+    linkedin: "https://www.linkedin.com/in/samantha-deori-mitra-678b46140/",
     shortBio:
       "Samantha graduated from the University of Kansas in 2020 and her masters degree in public policy from Columbia University.",
     bio: "Samantha graduated from the University of Kansas in 2020. She received her masters degree in public policy from Columbia University in 2022 and has been working in policy and legal at Uniswap since 2022.",
@@ -113,6 +119,7 @@ const mentors = [
     name: "Daniel Jones",
     title: "Sr. Manager, Product Lifecycle Management",
     company_logo: sams_club,
+    linkedin: "https://www.linkedin.com/in/danieljonesku/",
     shortBio:
       "Daniel is a tech-enabled young professional who is passionate about challenging the status quo and driving forward a positive disruption.",
     bio: "Daniel is a tech-enabled young professional who is passionate about challenging the status quo and driving forward a positive disruption. He enjoys building communities around common interests, educating and learning about emerging technologies, and engaging with new opportunities all the time.",
@@ -122,6 +129,7 @@ const mentors = [
     name: "Nathan Schwermann",
     title: "Founder & CEO of Ebisu`s Bay",
     company_logo: ebisu_bay,
+    linkedin: "https://www.linkedin.com/in/nathanschwermann/",
     shortBio:
       "Nathan founded and built one of the most groundbreaking GameFi platforms ever built. He is KU Alumni.",
     bio: "Nathan founded and built one of the most ground breaking GameFi platforms ever built. He is KU Alumni.",
@@ -131,6 +139,7 @@ const mentors = [
     title: "Associate Director & Assistant Research Professor at I2S",
     name: "Dr. Jennifer Lohoefener",
     company_logo: i2s,
+    linkedin: "https://www.linkedin.com/in/jennifer-lohoefener-a73a9845/",
     shortBio:
       "Dr. Lohoefener is KU Blockchain Institute's faculty advisor and a long-time supporter of blockchain research at the University of Kansas.",
     bio: "Dr. Lohoefener is KU Blockchain Institute's advisor and a long-time supporter of blockchain research at the University of Kansas. She brings experience from both academia and industry, including work at Ad Astra and Mylo.",
@@ -140,8 +149,13 @@ const mentors = [
 function Directory() {
   return (
     <Box textAlign="center" py={10} px={5}>
-      <Text fontSize="2xl" fontWeight="bold" mb={10}>
+      <Text fontSize="xxxl" fontWeight="bold" mb={10}>
         Directory
+      </Text>
+      <Text fontSize="md" fontWeight="bold" mb={10}>
+        Here you can find a list of mentors who are supporting the program this
+        summer. Feel free to reach out to them for advice, guidance, or just to
+        chat!
       </Text>
       <VStack spacing={5} align="stretch">
         {mentors.map((mentor, index) => (
