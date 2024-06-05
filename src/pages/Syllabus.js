@@ -287,7 +287,7 @@ function Syllabus() {
               Scholarship
             </Heading>
             <Text>
-              Each fellow will receive a $400 scholarship for their time and work in the Kansas Blockchain Fellowship program. 20% of
+              Each fellow will receive a $400 scholarship for their time and work in the Kansas Blockchain Fellowship program. 25% of
               the scholarship will be granted at the beginning of the program for fellows, while the other 80% of the scholarship will be
               paid out in full after the conclusion of the program, after successful completion of the program.
             </Text>
