@@ -155,8 +155,8 @@ const Fellows = () => {
       field_of_study: "Final Year Graduate Student in Computer Science",
       name: "Ramesh Solasa",
       shortBio:
-        "Ramesh Solasa is in his final year graduate student at the University of Kansas pursuing Computer Science at the Indian Institute of Technology Dhanbad. Achieving a remarkable rank of 5100 among one million students, Ramesh earned his place at the prestigious Indian Institute of Technology Dhanbad, where he pursued his Bachelors degree in engineering.",
-      bio: "Ramesh Solasa is in his final year graduate student at the University of Kansas pursuing Computer Science at the Indian Institute of Technology Dhanbad. Achieving a remarkable rank of 5100 among one million students, Ramesh earned his place at the prestigious Indian Institute of Technology Dhanbad, where he pursued his Bachelors degree in engineering.",
+        "Ramesh Solasa is a final year graduate student at the University of Kansas pursuing Computer Science. He completed his bachelor's at Indian Institute of Technology Dhanbad. Achieving a remarkable rank of 5100 among one million students, Ramesh earned his place at the prestigious Indian Institute of Technology Dhanbad, where he pursued his Bachelor's degree in engineering.",
+      bio: "Ramesh Solasa is a final year graduate student at the University of Kansas pursuing Computer Science. He completed his bachelor's at Indian Institute of Technology Dhanbad. Achieving a remarkable rank of 5100 among one million students, Ramesh earned his place at the prestigious Indian Institute of Technology Dhanbad, where he pursued his Bachelor's degree in engineering.",
     },
     {
       headshot: rahul_headshot,
