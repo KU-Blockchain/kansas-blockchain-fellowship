@@ -105,7 +105,7 @@ function Syllabus() {
                 Vice Director
               </Heading>
               <Text as='u'>Jahnvi Maddila</Text>
-              <Text>Email: <Link href="mailto:jahnvi.maddila@ku.edu">jahnvi.maddila@ku.edu</Link></Text>
+              <Text>Email: <Link href="mailto:jahnvi@ku.edu">jahnvi@ku.edu</Link></Text>
               <Text>Telegram: @jahnvimaddila</Text>
             </Box>
             <Box>
