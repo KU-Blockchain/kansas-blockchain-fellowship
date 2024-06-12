@@ -8,8 +8,8 @@ const Assignments = () => {
       title: "Telegram Onboarding",
       description:
         "Download Telegram on your phone and computer. Join the group at the link below. Once you join, read through the previous messages, and post an intro message to your peers and mentors.",
-      dueDate: "June 6th",
-      links: [{ url: "https://example.com", label: "Telegram Link" }],
+      dueDate: "June 13th",
+      links: [{ url: "https://t.me/+qDe46K0DZf9mZmUx", label: "Telegram Link" }],
     },
     {
       title: "Create a Metamask Wallet",
@@ -24,6 +24,38 @@ const Assignments = () => {
         {
           url: "https://forms.gle/nYGc9WuD97zvebBi7",
           label: "Instructions & Submission",
+        },
+      ],
+    },
+    {
+      title: "Interview Assignment",
+      description:
+        "Interview a mentor and write brief article about them.",
+      dueDate: "June 26th",
+      links: [
+        {
+          url: "https://kublockchain.notion.site/Interview-Assignment-KBF-2024-57147c6178ce4214a3a2e097b3c57d38",
+          label: "Instructions",
+        },
+        {
+          url: "https://forms.gle/8SnZvtSwPtPXcACW7",
+          label: "Submission",
+        },
+      ],
+    },
+    {
+      title: "Research Assignment",
+      description:
+        "Research a topic you might want to build your capstone project around.",
+      dueDate: "June 26th",
+      links: [
+        {
+          url: "https://kublockchain.notion.site/Interview-Assignment-KBF-2024-57147c6178ce4214a3a2e097b3c57d38",
+          label: "Instructions",
+        },
+        {
+          url: "https://forms.gle/8SnZvtSwPtPXcACW7",
+          label: "Submission",
         },
       ],
     },
