@@ -1,11 +1,20 @@
 import React from "react";
 import { VStack, Text, Link, Box, Button } from "@chakra-ui/react";
 
-const Assignment = ({ title, description, dueDate, links, submissionlink }) => {
+const Assignment = ({
+  title,
+  description,
+  dueDate,
+  links,
+  submissionlink,
+  estimatedHours,
+}) => {
   return (
     <Box
       align="stretch"
       p={4}
+      pl={6} // Increase left padding
+      pr={6} // Increase right padding
       borderWidth="1px"
       borderRadius="lg"
       boxShadow="sm"
@@ -16,13 +25,19 @@ const Assignment = ({ title, description, dueDate, links, submissionlink }) => {
       <Text fontSize="xl" color="black" fontWeight="bold">
         {title}
       </Text>
+      <Text color="teal.600" fontWeight="semibold" fontSize="md">
+        Plan to spend {estimatedHours} on this.
+      </Text>
 
       <Text fontWeight="extrabold" color="purple.700">
         Due {dueDate}
       </Text>
+
       <Text fontSize="md" pb="10px" color="black">
         {description}
       </Text>
+
+      {/* New field for estimated hours */}
 
       <VStack spacing={2}>
         {links.map((link, index) => (

@@ -5,17 +5,36 @@ import Assignment from "./Assignment";
 const Assignments = () => {
   const assignments = [
     {
-      title: "Telegram Onboarding",
+      title: "Communication Channels Onboarding",
       description:
-        "Download Telegram on your phone and computer. Join the group at the link below. Once you join, read through the previous messages, and post an intro message to your peers and mentors.",
+        "Download Telegram on your phone and computer. Join both groups at the links below. Once you join, read through the previous messages, check out the pinned message, and post an intro message to your peers and mentors. Also, join the KUBI Fellows Discord channel! We want you to get comfortable with Telegram/Discord, because these are the two main communication platforms for blockchain communities.",
       dueDate: "June 13th",
-      links: [{ url: "https://t.me/+qDe46K0DZf9mZmUx", label: "Telegram Link" }],
+      estimatedHours: "1/2 an hour",
+      links: [
+        { url: "https://t.me/+qDe46K0DZf9mZmUx", label: "Official Chat Link" },
+        { url: "https://t.me/+gBqUI7IqL4Q4ZDdh", label: "Fellows Only Link" },
+        { url: "https://discord.gg/QxEDNaqP", label: "Discord Link" },
+      ],
+    },
+    {
+      title: "Add KBF Calendar to Your Digital Calendar",
+      description:
+        "Add KBF calendar to see all deadlines + class details. This should work for Google Calendar, Outlook, and Apple Calendar. If you have questions, ask in the Fellows Only chat or message Emma. These deadlines and event details are also available at the calendar at the bottom of this page.",
+      dueDate: "June 13th",
+      estimatedHours: "10 minutes",
+      links: [
+        {
+          url: "https://calendar.google.com/calendar/u/0?cid=a2Fuc2FzYmxvY2tjaGFpbmZlbGxvd3NoaXBAZ21haWwuY29t",
+          label: "Click Here to Add",
+        },
+      ],
     },
     {
       title: "Create a Metamask Wallet",
       description:
         "More details on this will be released at our class on June 13th, but feel free to get a headstart on this.",
       dueDate: "June 20th",
+      estimatedHours: "1 hour",
       links: [
         {
           url: "https://www.youtube.com/watch?v=Af_lQ1zUnoM",
@@ -29,13 +48,14 @@ const Assignments = () => {
     },
     {
       title: "Interview Assignment",
+      estimatedHours: "2-3 hours",
       description:
-        "Interview a mentor and write brief article about them.",
-      dueDate: "June 26th",
+        "Interview a mentor and write a brief article about them. Aim to interview them by June 26th. Plan to record your interview so that you can easily refer back to it. Emma will introduce you to your assigned mentor, and you can use that thread to schedule a call.",
+      dueDate: "July 1st",
       links: [
         {
           url: "https://kublockchain.notion.site/Interview-Assignment-KBF-2024-57147c6178ce4214a3a2e097b3c57d38",
-          label: "Instructions",
+          label: "Full Instructions",
         },
         {
           url: "https://forms.gle/8SnZvtSwPtPXcACW7",
@@ -46,8 +66,9 @@ const Assignments = () => {
     {
       title: "Research Assignment",
       description:
-        "Research a topic you might want to build your capstone project around.",
-      dueDate: "June 26th",
+        "Research a topic you might want to build your capstone project around. Full instructions can be found at the instructions link below, under Part 1: Research Assignment.",
+      estimatedHours: "5-6 hours",
+      dueDate: "June 24th",
       links: [
         {
           url: "https://kublockchain.notion.site/Interview-Assignment-KBF-2024-57147c6178ce4214a3a2e097b3c57d38",
@@ -62,11 +83,14 @@ const Assignments = () => {
   ];
 
   return (
-    <VStack align="stretch" spacing={4}>
-      {assignments.map((assignment, index) => (
-        <Assignment key={index} {...assignment} />
-      ))}
-    </VStack>
+    <Box mx="auto" maxWidth="800px" width="100%">
+      {" "}
+      <VStack align="stretch" spacing={4}>
+        {assignments.map((assignment, index) => (
+          <Assignment key={index} {...assignment} />
+        ))}
+      </VStack>
+    </Box>
   );
 };
 
