@@ -7,7 +7,7 @@ const class_lectures = [
     title: "Week 0 - Orientation",
     date: "June 6, 2024",
     embed: "<iframe id='kmsembed-1_jorrrtyg' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_jorrrtyg/uiConfId/46527243/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 0 - Orientation'></iframe>",
-    lecture_notes: "https://notion.so",
+    lecture_notes: "https://docs.google.com/presentation/d/19UXVcwlc6-OJJ4ZcGLMpC977YSyab2QxtTrYilTyHxk/edit?usp=sharing",
   },
 ];
 
