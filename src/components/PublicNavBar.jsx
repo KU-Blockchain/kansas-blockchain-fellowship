@@ -53,9 +53,9 @@ function PublicNavbar() {
       <ChakraLink as={Link} to="/dashboard/resources" sx={linkStyle}>
         Resources
       </ChakraLink>
-      <ChakraLink as={Link} to="/dashboard/directory" sx={linkStyle}>
+      {/* <ChakraLink as={Link} to="/dashboard/directory" sx={linkStyle}>
         Directory
-      </ChakraLink>
+      </ChakraLink> */}
       <ChakraLink as={Link} to="/dashboard/syllabus" sx={linkStyle}>
         Syllabus
       </ChakraLink>
@@ -87,9 +87,9 @@ function PublicNavbar() {
       <MenuItem as={Link} to="/dashboard/resources">
         Resources
       </MenuItem>
-      <MenuItem as={Link} to="/dashboard/directory">
+      {/* <MenuItem as={Link} to="/dashboard/directory">
         Directory
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem as={Link} to="/dashboard/syllabus">
         Syllabus
       </MenuItem>

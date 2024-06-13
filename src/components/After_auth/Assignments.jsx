@@ -19,7 +19,7 @@ const Assignments = () => {
     {
       title: "Add KBF Calendar to Your Digital Calendar",
       description:
-        "Add KBF calendar to see all deadlines + class details. This should work for Google Calendar, Outlook, and Apple Calendar. If you have questions, ask in the Fellows Only chat or message Emma. These deadlines and event details are also available at the calendar at the bottom of this page.",
+        "Add KBF calendar to see all deadlines + class details. This should work for Google Calendar, Outlook, and Apple Calendar. If you fun into issues, you should be able to manually add it by subscribing to kansasblockchainfellowship@gmail.com on your calendar service. These deadlines and event details are also available at the calendar at the bottom of this page.",
       dueDate: "June 13th",
       estimatedHours: "10 minutes",
       links: [

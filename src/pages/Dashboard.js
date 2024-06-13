@@ -12,10 +12,10 @@ function Dashboard() {
         <Text fontSize="xxxl" mt={5} fontWeight="bold">
           Welcome!
         </Text>
-        <Text mt={4} mx="auto" maxWidth="90%" textColor="gray.300">
-          Welcome to the Fellowship Dashboard. This platform is your homebase
-          for all resources, links, and assignments. Please check this page
-          regularly for upcoming deadlines and events.
+        <Text mt={4} mx="auto" maxWidth="70%" textColor="gray.300">
+          This platform is your homebase for all resources, links, and
+          assignments. Please check this page regularly for upcoming deadlines
+          and events.
         </Text>
         <VStack
           spacing={10}
