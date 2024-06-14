@@ -157,6 +157,11 @@ function Directory() {
         summer. Feel free to reach out to them for advice, guidance, or just to
         chat!
       </Text>
+      {/* <Text fontSize="md" fontWeight="bold" mb={10}>
+        Here you can find a list of mentors who are supporting the program this
+        summer. Feel free to reach out to them for advice, guidance, or just to
+        chat!
+      </Text>
       <VStack spacing={5} align="stretch">
         {mentors.map((mentor, index) => (
           <Mentor
@@ -171,7 +176,7 @@ function Directory() {
             howToContact={mentor.howToContact}
           />
         ))}
-      </VStack>
+      </VStack> */}
     </Box>
   );
 }
