@@ -33,7 +33,7 @@ const supplemental_materials = [
     description:
       "This video will walk you through how to set up a MetaMask wallet.",
     embed:
-      "<iframe id='kmsembed-1_fms4ifcb' width='400' height='285' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_fms4ifcb/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - MetaMask Tutorial'></iframe>",
+      "<iframe id='kmsembed-1_fms4ifcb' width='300' height='185' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_fms4ifcb/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - MetaMask Tutorial'></iframe>",
     link: "",
   },
   {
@@ -92,8 +92,15 @@ function Resources() {
                     dangerouslySetInnerHTML={{ __html: lecture.embed }}
                     mt={5}
                   ></Box>
-                  <Button>
-                    <a href={lecture.lecture_notes} target="_blank" rel="noopener noreferrer">Class Slide Deck</a>
+                  <Button
+                    color="black"
+                    as={Link}
+                    href={lecture.lecture_notes}
+                    isExternal
+                    colorScheme="blue"
+                    variant="outline"
+                  >
+                    Class Slide Deck
                   </Button>
                 </Box>
               ))}

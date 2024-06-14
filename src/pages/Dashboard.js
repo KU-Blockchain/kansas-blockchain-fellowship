@@ -26,15 +26,15 @@ function Dashboard() {
         >
           <Box>
             <Text fontSize="xxxl" fontWeight="bold">
-              Assignments
-            </Text>
-            <Assignments />
-          </Box>
-          <Box>
-            <Text fontSize="xxxl" fontWeight="bold">
               Calendar
             </Text>
             <Calendar />
+          </Box>
+          <Box>
+            <Text fontSize="xxxl" fontWeight="bold">
+              Assignments
+            </Text>
+            <Assignments />
           </Box>
         </VStack>
         <Footer />
