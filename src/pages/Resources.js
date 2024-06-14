@@ -4,6 +4,12 @@ import { Button, Box, Heading, Text, Image, Stack, HStack } from "@chakra-ui/rea
 
 const class_lectures = [
   {
+    title: "Week 1 - Basics of Blockchain",
+    date: "June 13, 2024",
+    embed: "<iframe id='kmsembed-1_isz4j0s4' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_isz4j0s4/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 0 - Orientation'></iframe>",
+    lecture_notes: "https://docs.google.com/presentation/d/1gLhyHVXHAL1_CB1GORV1ETYatQHtWxElRAumrTQUtgE/edit?usp=sharing",
+  },
+  {
     title: "Week 0 - Orientation",
     date: "June 6, 2024",
     embed: "<iframe id='kmsembed-1_jorrrtyg' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_jorrrtyg/uiConfId/46527243/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 0 - Orientation'></iframe>",
@@ -40,7 +46,7 @@ function Resources() {
                     mt={5}
                   ></Box>
                   <Button>
-                    <a href={lecture.lecture_notes}>Class Slide Deck</a>
+                    <a href={lecture.lecture_notes} target="_blank" rel="noopener noreferrer">Class Slide Deck</a>
                   </Button>
                 </Box>
               ))}
@@ -59,7 +65,7 @@ function Resources() {
                   ></Box>
                   { material.link &&
                   <Button>
-                    <a href={material.link}>Link</a>
+                    <a href={material.link} target="_blank" rel="noopener noreferrer">Link</a>
                   </Button>
                   }
                 </Box>
