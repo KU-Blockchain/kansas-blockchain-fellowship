@@ -15,14 +15,14 @@ const class_lectures = [
     title: "Week 2 - Applications of Blockchain",
     date: "June 20, 2024",
     embed:
-      "<iframe id='kmsembed-1_jorrrtyg' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_jorrrtyg/uiConfId/46527243/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 0 - Orientation'></iframe>",
+      "<iframe id='kmsembed-1_ugitq9z1' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_ugitq9z1/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 2 - Applications of Blockchain'></iframe>",
     lecture_notes:
       "https://docs.google.com/presentation/d/1NNgdhRQx8bwZ-ukPUasiqAQSi2D0ygvR2zpsZMoUyFk/edit?usp=sharing",
   },
   {
     title: "Week 1 - Basics of Blockchain",
     date: "June 13, 2024",
-    embed: "<iframe id='kmsembed-1_isz4j0s4' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_isz4j0s4/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 0 - Orientation'></iframe>",
+    embed: "<iframe id='kmsembed-1_isz4j0s4' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_isz4j0s4/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship Week 1 - Basics of Blockchain'></iframe>",
     lecture_notes: "https://docs.google.com/presentation/d/1gLhyHVXHAL1_CB1GORV1ETYatQHtWxElRAumrTQUtgE/edit?usp=sharing",
   },
   {
