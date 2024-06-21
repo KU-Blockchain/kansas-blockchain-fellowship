@@ -71,11 +71,11 @@ const Assignments = () => {
       dueDate: "June 24th",
       links: [
         {
-          url: "https://kublockchain.notion.site/Interview-Assignment-KBF-2024-57147c6178ce4214a3a2e097b3c57d38",
+          url: "https://kublockchain.notion.site/Capstone-Design-Roadmap-32bb8749bf8d466a80a6fb15add79757",
           label: "Instructions",
         },
         {
-          url: "https://forms.gle/8SnZvtSwPtPXcACW7",
+          url: "https://forms.gle/R3favuk59gqrbPgx9",
           label: "Submission",
         },
       ],
