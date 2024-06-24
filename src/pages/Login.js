@@ -1,8 +1,19 @@
-import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Text, Button } from "@chakra-ui/react";
+import QuickLoginAPI from "../components/QuickLoginAPI";
 import QuickLogin from "../components/QuickLogin";
 
 function Login() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+
   return (
     <Box textAlign="center" py={10}>
       <Text fontSize="xl" mt={5} fontWeight="extrabold" mx={6}>
@@ -26,7 +37,9 @@ function Login() {
       // alignItems="center"
       // id="quicklogin-container"
       >
-        <QuickLogin />
+        {/* <QuickLogin /> */}
+        <Button onClick={openModal} colorScheme="blue">Heirloom QuickLogin</Button>
+        <QuickLoginAPI isOpen={isModalOpen} onClose={closeModal} />
       </Box>
       {/* <Text color="gray.400" fontSize="md" mx="8vh">
         If you are having trouble accessing your credential or logging in,
