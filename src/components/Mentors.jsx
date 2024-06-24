@@ -25,6 +25,7 @@ import thomas_headshot from "../images/mentor_headshots/thomas_flynn.jpeg";
 import paige_headshot from "../images/mentor_headshots/paige_jones.jpeg";
 import samantha_headshot from "../images/mentor_headshots/samantha_mitra.jpeg";
 import nathan_headshot from "../images/mentor_headshots/nathan_schwermann.jpeg";
+import pat_headshot from "../images/mentor_headshots/pat_thelen.png";
 
 import i2s from "../images/logos/i2s.png";
 import dragonChain from "../images/logos/dragonchain.png";
@@ -40,6 +41,7 @@ import iohk from "../images/logos/iohk.jpeg";
 import solana from "../images/logos/solana.png";
 import spheron from "../images/logos/spheron_network.jpeg";
 import ebisu_bay from "../images/logos/ebisu_bay.png";
+import ripple from "../images/logos/ripple.png";
 
 const Mentors = () => {
   const [selectedMentor, setSelectedMentor] = useState(null);
@@ -58,6 +60,15 @@ const Mentors = () => {
       shortBio:
         "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
       bio: "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+    },
+    {
+      headshot: pat_headshot,
+      title: "Managing Director of Business Development at Ripple",
+      name: "Pat Thelen",
+      company_logo: ripple,
+      shortBio:
+        "Pat Thelen is a Kansas City native, University of Kansas alumn, and Managing Director of Business Development at Ripple.",
+      bio: "Pat Thelen is a Kansas City native, University of Kansas alumn, and Managing Director of Business Development at Ripple.",
     },
     {
       headshot: paige_headshot,
