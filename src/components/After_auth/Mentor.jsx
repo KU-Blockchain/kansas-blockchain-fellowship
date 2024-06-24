@@ -44,14 +44,14 @@ const Mentor = ({
             <Text fontSize="md" fontWeight="semibold">
               {title}
             </Text>
-            <Text fontSize="md" marginX={"20px"}>
+            <Text fontSize="sm" marginX={"20px"}>
               {shortBio}
             </Text>
-            <Text fontSize="md" color="purple.200" fontWeight="bold">
+            <Text fontSize="sm" color="purple.200" fontWeight="bold">
               To contact, {howToContact}
             </Text>
-            <Text fontSize="lg">
-              <Link href={linkedin} color="blue.500" isExternal>
+            <Text fontSize="md" mx="30px">
+              <Link href={linkedin} color="blue.300" isExternal>
                 LinkedIn
               </Link>
             </Text>

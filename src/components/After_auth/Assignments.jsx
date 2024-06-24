@@ -80,6 +80,23 @@ const Assignments = () => {
         },
       ],
     },
+    {
+      title: "Capstone Topic Assignment",
+      description:
+        "Refine your research into a single topic. Full instructions can be found at the instructions link below, under Part 2: Topic Assignment.",
+      estimatedHours: "1 hour (or less)",
+      dueDate: "June 26th",
+      links: [
+        {
+          url: "https://kublockchain.notion.site/Capstone-Design-Roadmap-32bb8749bf8d466a80a6fb15add79757",
+          label: "Instructions",
+        },
+        {
+          url: "https://forms.gle/8V8VQoi7vGsWjgcY7",
+          label: "Submission",
+        },
+      ],
+    },
   ];
 
   return (

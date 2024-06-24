@@ -32,6 +32,7 @@ import ramesh_headshot from "../images/fellow_headshots/ramesh_solasa.jpeg";
 import rahul_headshot from "../images/fellow_headshots/rahul_desai.jpeg";
 import kyle_headshot from "../images/fellow_headshots/kyle_spragg.jpg";
 import ellia_headshot from "../images/fellow_headshots/ellia_morse.jpeg";
+import marcos_headshot from "../images/fellow_headshots/marcos_lepage.jpg";
 
 const Fellows = () => {
   const [selectedFellow, setSelectedFellow] = useState(null);
@@ -135,12 +136,12 @@ const Fellows = () => {
       bio: "Eli Chapman is a High School Senior from Topeka, Kansas interested in furthering his knowledge of computer science systems. He has worked with Web Development, earning 2nd place at KUs 2022 Design Competition with a website he made with a partner. Additionally, he founded and led the Computer Science Honors Society at his school to increase early exposure to programming in elementary and middle schoolers. Community is extremely important to him, and he is excited to find new applications for blockchain technology in communities and systems where it will have substantial impact.",
     },
     {
-      headshot: noor_headshot,
-      field_of_study: "Final Year Business Analytics Student",
-      name: "Noor Syed",
+      headshot: marcos_headshot,
+      field_of_study: "Junior in Computer Science",
+      name: "Marcos Lepage",
       shortBio:
-        "Noor Syed is in her final year at the University of Kansas, completing a Bachelor of Science in Business Analytics. She is a self-starter, eager to learn more and committed to doing her best everyday. She has applied her passion of helping others discover the stories behind raw data to her past Business Analytics internship at PepsiCo and Data Analyst role at Yellow Bug Creative.",
-      bio: "Noor Syed is in her final year at the University of Kansas, completing a Bachelor of Science in Business Analytics. She is a self-starter, eager to learn more and committed to doing her best everyday. She has applied her passion of helping others discover the stories behind raw data to her past Business Analytics internship at PepsiCo and Data Analyst role at Yellow Bug Creative.",
+        "Marcos Lepage is an incoming junior at The University of Kansas studying Computer Science. He is from Lawrence, Kansas. His career interests range from software engineering to AI/ML, and game development. Marcos is excited to build a project in the Web3 space while learning more about blockchain and its use cases in the industry.",
+      bio: "Marcos Lepage is an incoming junior at The University of Kansas studying computer science. He is from Lawrence, Kansas. His career interests range from software engineering to AI/ML, and game development. Marcos is excited to build a project in the Web3 space while learning more about blockchain and its use cases in the industry.",
     },
     {
       headshot: shivansh_headshot,
