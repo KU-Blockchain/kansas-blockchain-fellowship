@@ -16,7 +16,7 @@ const Login = ({ isOpen, onClose }) => {
         if (isOpen) {
             const getJWT = async() => {
                 //const response = await fetch('../api/QuickLoginJWT'); moving to the kbf server to fetch JWT
-                const response = await fetch(`https://api.kublockchain.com/api/QuickLoginJWT`);
+                const response = await fetch(`https://api.kublockchain.com:4000/api/QuickLoginJWT`);
 
                 if (response.ok) {
                     const data = await response.json();
@@ -45,7 +45,7 @@ const Login = ({ isOpen, onClose }) => {
                     //     },
                     //     body: JSON.stringify({ jwtChallenge: jwtChallenge }),
                     // });
-                    const response = await fetch(`https://api.kublockchain.com/api/QuickLoginSocket`, {
+                    const response = await fetch(`https://api.kublockchain.com:4000/api/QuickLoginSocket`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
