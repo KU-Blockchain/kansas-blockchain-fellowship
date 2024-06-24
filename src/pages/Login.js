@@ -37,9 +37,9 @@ function Login() {
       // alignItems="center"
       // id="quicklogin-container"
       >
-        {/* <QuickLogin /> */}
-        <Button onClick={openModal} colorScheme="blue">Heirloom QuickLogin</Button>
-        <QuickLoginAPI isOpen={isModalOpen} onClose={closeModal} />
+        <QuickLogin />
+        {/* <Button onClick={openModal} colorScheme="blue">Heirloom QuickLogin</Button>
+        <QuickLoginAPI isOpen={isModalOpen} onClose={closeModal} /> */}
       </Box>
       {/* <Text color="gray.400" fontSize="md" mx="8vh">
         If you are having trouble accessing your credential or logging in,
