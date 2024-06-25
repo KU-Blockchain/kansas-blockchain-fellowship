@@ -37,8 +37,8 @@ function Login() {
       // alignItems="center"
       // id="quicklogin-container"
       >
-        {/* <QuickLogin /> */}
-        <Button onClick={openModal} colorScheme="blue">Heirloom QuickLogin</Button>
+        <QuickLogin />
+        <Button onClick={openModal} colorScheme="blue">Fellow QuickLogin</Button>
       </Box>
       <QuickLoginAPI isOpen={isModalOpen} onClose={closeModal} />
       {/* <Text color="gray.400" fontSize="md" mx="8vh">
