@@ -92,7 +92,7 @@ const Assignments = () => {
           label: "Instructions",
         },
         {
-          url: "https://forms.gle/8V8VQoi7vGsWjgcY7",
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSf6EfyppDW2Diew2D4h2qNE7rBTm9Gs2ufs7bj4LSnhHY0oPA/viewform",
           label: "Submission",
         },
       ],
