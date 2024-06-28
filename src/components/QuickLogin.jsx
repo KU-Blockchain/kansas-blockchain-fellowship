@@ -18,7 +18,7 @@ function QuickLoginTest() {
       const script = document.createElement("script");
       script.id = scriptId;
       script.src =
-        "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.2.0/dist/quicklogin.js";
+        "https://cdn.jsdelivr.net/gh/heirloom-io/quicklogin-js@0.2.1/dist/quicklogin.js";
       script.onload = () => setTimeout(initializeQuickLogin, 100);
       document.body.appendChild(script);
     };
@@ -40,11 +40,14 @@ function QuickLoginTest() {
       buttonContainer.style.position = "absolute";
       buttonContainer.style.left = "50%";
       buttonContainer.style.transform = "translateX(-50%)";
-      buttonContainer.style.width = "70%";
+      buttonContainer.style.width = "fit-content";
       buttonContainer.style.display = "flex";
       buttonContainer.style.justifyContent = "center";
       buttonContainer.style.alignItems = "center";
       buttonContainer.style.padding = "40px";
+      buttonContainer.style.borderWidth="2px"
+      buttonContainer.style.borderRadius="10px"
+      buttonContainer.style.borderColor="orange"
       buttonContainer.style.backgroundColor = "white"; // Temporarily set a semi-transparent white background
 
       const apiKey = process.env.REACT_APP_HEIRLOOM_API_KEY;
@@ -55,6 +58,7 @@ function QuickLoginTest() {
           container: buttonContainer,
           apiKey: apiKey,
           lockId: lockId,
+          legacyUrl: true,
           onQuickLoginSuccess: (authToken) => {
             console.log("Authentication successful.", authToken);
             verifyUser(authToken);
