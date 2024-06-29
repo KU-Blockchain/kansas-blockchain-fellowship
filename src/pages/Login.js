@@ -23,19 +23,19 @@ function Login() {
         Click the Heirloom QuickLogin button below to login.
       </Text>
       <Box
-      mt={4}
-      p={5}
-      height="200px"
-      borderWidth="2px"
-      borderColor="orange"
-      borderRadius="lg"
-      backgroundColor="white"
-      maxW="sm"
-      mx="auto"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      id="quicklogin-container"
+      // mt={4}
+      // p={5}
+      // height="200px"
+      // borderWidth="2px"
+      // borderColor="orange"
+      // borderRadius="lg"
+      // backgroundColor="white"
+      // maxW="sm"
+      // mx="auto"
+      // display="flex"
+      // justifyContent="center"
+      // alignItems="center"
+      // id="quicklogin-container"
       >
         <QuickLogin />
         {/* <Button onClick={openModal} colorScheme="blue">Fellow QuickLogin</Button> */}
