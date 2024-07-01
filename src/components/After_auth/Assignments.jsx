@@ -97,6 +97,23 @@ const Assignments = () => {
         },
       ],
     },
+    {
+      title: "Capstone Proposal Assignment",
+      description:
+        "Expand your topic into a thorough proposal. Full instructions can be found at the instructions link below.",
+      estimatedHours: "2 hours",
+      dueDate: "July 3rd",
+      links: [
+        {
+          url: "https://docs.google.com/document/d/14P-E4HRdgS8wBDrWsxGGMLw6WC4D815StvLhCOsgl8A/edit?usp=sharing",
+          label: "Instructions & Template",
+        },
+        {
+          url: "https://forms.gle/tfSZcDrQJ7eQFvh89",
+          label: "Submission",
+        },
+      ],
+    },
   ];
 
   return (
