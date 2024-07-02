@@ -46,25 +46,21 @@ const class_lectures = [
 
 const supplemental_materials = [
   {
-    title: "MetaMask Tutorial",
-    description:
-      "This video will walk you through how to set up a MetaMask wallet.",
-    embed:
-      "<iframe id='kmsembed-1_fms4ifcb' width='300' height='185' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_fms4ifcb/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - MetaMask Tutorial'></iframe>",
-    link: "",
+    title: "Blockchain Infographics",
+    description: "A collection of infographics explaining blockchain concepts.",
+    link: "https://cryptographics.info/",
+    buttonLabel: "View Infographics",
   },
   {
-    title: "2016 DAO Hack + ETH Fork",
-    description: "Mentioned by Joe in class.",
-    // embed: "<iframe id='kmsembed-1_fms4ifcb' width='400' height='285' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_fms4ifcb/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - MetaMask Tutorial'></iframe>",
-    link: "https://www.coindesk.com/learn/understanding-the-dao-attack/",
-    buttonLabel: "Read Article",
+    title: "Crypto Address Generator",
+    description: "Fun tool to generate a Bitcoin or Litecoin address deterministically.",
+    link: "https://brainwallet.io/",
+    buttonLabel: "Generate",
   },
   {
-    title: "Simple Analogy for Blockchain",
-    description:
-      "Here, the XRPL Learning Portal analogizes blockchain as a system for managing village barters and IOUs.",
-    link: "https://learn.xrpl.org/course/blockchain-and-crypto-basics/lesson/what-is-a-blockchain/",
+    title: "Outline of Types of Blockchains",
+    description: "Article clarifying differences between types of blockchains.",
+    link: "https://www.techopedia.com/4-types-of-blockchain-explained-a-complete-guide",
     buttonLabel: "Read Article",
   },
   {
@@ -75,10 +71,26 @@ const supplemental_materials = [
     buttonLabel: "Watch Video",
   },
   {
-    title: "Outline of Types of Blockchains",
-    description: "Article clarifying differences between types of blockchains.",
-    link: "https://www.techopedia.com/4-types-of-blockchain-explained-a-complete-guide",
+    title: "Simple Analogy for Blockchain",
+    description:
+      "Here, the XRPL Learning Portal analogizes blockchain as a system for managing village barters and IOUs.",
+    link: "https://learn.xrpl.org/course/blockchain-and-crypto-basics/lesson/what-is-a-blockchain/",
     buttonLabel: "Read Article",
+  },
+  {
+    title: "2016 DAO Hack + ETH Fork",
+    description: "Mentioned by Joe in class.",
+    // embed: "<iframe id='kmsembed-1_fms4ifcb' width='400' height='285' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_fms4ifcb/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - MetaMask Tutorial'></iframe>",
+    link: "https://www.coindesk.com/learn/understanding-the-dao-attack/",
+    buttonLabel: "Read Article",
+  },
+  {
+    title: "MetaMask Tutorial",
+    description:
+      "This video will walk you through how to set up a MetaMask wallet.",
+    embed:
+      "<iframe id='kmsembed-1_fms4ifcb' width='300' height='185' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_fms4ifcb/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - MetaMask Tutorial'></iframe>",
+    link: "",
   },
 ];
 
