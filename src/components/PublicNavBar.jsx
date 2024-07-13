@@ -59,6 +59,9 @@ function PublicNavbar() {
       <ChakraLink as={Link} to="/dashboard/syllabus" sx={linkStyle}>
         Syllabus
       </ChakraLink>
+      <ChakraLink as={Link} isExternal to="https://app.kansasblockchain.org" sx={linkStyle}>
+        Portal
+      </ChakraLink>
     </>
   );
 
