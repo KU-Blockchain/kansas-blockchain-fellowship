@@ -12,6 +12,14 @@ import {
 
 const class_lectures = [
   {
+    title: "Week 5 -dApp Development Workshop",
+    date: "July 11, 2024",
+    embed:
+      "<iframe id='kmsembed-1_bagufvs5' width='500' height='385' src='https://mediahub.ku.edu/embed/secure/iframe/entryId/1_bagufvs5/uiConfId/45147491/st/0' class='kmsembed' allowfullscreen webkitallowfullscreen mozAllowFullScreen allow='autoplay *; fullscreen *; encrypted-media *' referrerPolicy='no-referrer-when-downgrade' sandbox='allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation' frameborder='0' title='Kansas Blockchain Fellowship - Week 5'></iframe>",
+    lecture_notes:
+      "https://docs.google.com/presentation/d/16aA0-X5SFwz0X2VvGYIvtkvLQFRWYteInDo-I6J8yp8/edit?usp=sharing",
+  },
+  {
     title: "Week 4 - Overview of Industry",
     date: "July 2, 2024",
     embed:
