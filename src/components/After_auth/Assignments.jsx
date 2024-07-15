@@ -5,27 +5,15 @@ import Assignment from "./Assignment";
 const Assignments = () => {
   const assignments = [
     {
-      title: "Schedule a Resume Review (Optional)",
+      title: "Resume Review Submission (Optional)",
       description:
-        "Schedule a resume review with either Firangiz or Bhavik to be eligible for the KBF talent pool. Be ready to screen share your resume with them in this virtual call. If there are no slots available, contact the KBF team and we will set up more times.",
-      dueDate: "Aim to schedule by July 3rd",
-      estimatedHours: "1/2 an hour",
+        "If you want your resume included in the KBF talent pool, after your resume review, revise your resume according to your reviewer's suggestions. Then submit the revised version as a PDF here.",
+      dueDate: "July 22nd",
+      estimatedHours: "2 hours",
       links: [
         {
-          url: "https://calendly.com/firangizganbarlii/30min",
-          label: "Schedule with Firangiz",
-        },
-        {
-          url: "https://www.linkedin.com/in/firangizg/",
-          label: "Firangiz LinkedIn",
-        },
-        {
-          url: "https://calendly.com/bhavikgoplani/kansas-blockchain-resume-reviews",
-          label: "Schedule with Bhavik",
-        },
-        {
-          url: "https://www.linkedin.com/in/bhavik-goplani/",
-          label: "Bhavik LinkedIn",
+          url: "https://forms.gle/XrXzMeJjjXHxVVjU6",
+          label: "Submit your Resume",
         },
       ],
     },

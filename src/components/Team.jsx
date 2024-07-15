@@ -18,7 +18,7 @@ import TeamMember from "./TeamMember"; // Make sure this import path is correct
 import emma_headshot from "../images/team_headshots/emma.jpeg";
 import yash_headshot from "../images/team_headshots/yash.jpeg";
 import jahnvi_headshot from "../images/team_headshots/jahnvi.jpeg";
-import micah_headshot from "../images/team_headshots/micah.JPG";
+import micah_headshot from "../images/team_headshots/micah.jpg";
 
 const Team = () => {
   const [selectedMember, setSelectedMember] = useState(null); // State to track the selected team member

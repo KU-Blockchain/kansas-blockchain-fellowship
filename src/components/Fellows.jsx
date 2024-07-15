@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 import Fellow from "./Fellow";
 
-import austin_headshot from "../images/mentor_headshots/austin_adams.jpeg";
 import suhaan_headshot from "../images/fellow_headshots/suhaan_syed.jpeg";
 import shayaan_headshot from "../images/fellow_headshots/shayaan_mohammed.jpg";
 import nimra_headshot from "../images/fellow_headshots/nimra_syed.jpg";
@@ -26,13 +25,12 @@ import andrew_headshot from "../images/fellow_headshots/andrew_huang.jpg";
 import caleb_headshot from "../images/fellow_headshots/caleb_hite.jpg";
 import eli_headshot from "../images/fellow_headshots/eli_chapman.jpeg";
 import jay_headshot from "../images/fellow_headshots/jay_patel.jpeg";
-import noor_headshot from "../images/fellow_headshots/noor_syed.jpeg";
 import shivansh_headshot from "../images/fellow_headshots/shivansh_shrivas.jpeg";
-import ramesh_headshot from "../images/fellow_headshots/ramesh_solasa.jpeg";
+import ramesh_headshot from "../images/fellow_headshots/ramesh_solasa.jpg";
 import rahul_headshot from "../images/fellow_headshots/rahul_desai.jpeg";
 import kyle_headshot from "../images/fellow_headshots/kyle_spragg.jpg";
 import ellia_headshot from "../images/fellow_headshots/ellia_morse.jpeg";
-import marcos_headshot from "../images/fellow_headshots/marcos_lepage.jpg";
+import marcos_headshot from "../images/fellow_headshots/marcos_lepage.jpeg";
 
 const Fellows = () => {
   const [selectedFellow, setSelectedFellow] = useState(null);
