@@ -163,9 +163,6 @@ function PublicNavbar() {
                 <MenuItem as={Link} to="/login">
                   Login
                 </MenuItem>
-                <MenuItem>
-                  <ColorModeSwitcher />
-                </MenuItem>
               </>
             )}
           </MenuList>

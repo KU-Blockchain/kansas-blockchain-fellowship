@@ -64,7 +64,7 @@ const Team = () => {
   };
 
   return (
-    <Box>
+    <Box px={5}>
       <Heading as="h2" size="xl" textAlign="center" my={5}>
         Our Team
       </Heading>

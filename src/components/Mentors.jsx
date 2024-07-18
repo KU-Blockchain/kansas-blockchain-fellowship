@@ -168,7 +168,7 @@ const Mentors = () => {
   ];
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" my={5} m="5">
+    <Box display="flex" flexDirection="column" alignItems="center" my={5} px={10}>
       <Heading as="h2" size="xl" textAlign="center" my={5}>
         Our Mentors
       </Heading>
