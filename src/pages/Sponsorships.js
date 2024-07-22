@@ -10,12 +10,14 @@ import {
 } from "@chakra-ui/react";
 import learning from "../images/learning.jpeg";
 import Footer from "../components/Footer";
+import Sponsors from "../components/Sponsors";
 
 function Sponsorships() {
   return (
     <>
       <VStack spacing={10} align="stretch">
-        <Flex
+        <Sponsors />
+        {/* <Flex
           direction={{ base: "column", md: "row" }}
           align="center"
           justify="center"
@@ -71,7 +73,7 @@ function Sponsorships() {
             </Link>
             .
           </Text>
-        </Flex>
+        </Flex> */}
       </VStack>
       <Footer />
     </>
