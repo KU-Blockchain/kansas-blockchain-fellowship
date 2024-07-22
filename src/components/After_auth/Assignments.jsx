@@ -5,6 +5,32 @@ import Assignment from "./Assignment";
 const Assignments = () => {
   const assignments = [
     {
+      title: "Capstone Final Submission",
+      description:
+        "Here is the Devpost where you will submit your final Capstone project!",
+      dueDate: "July 24th @ 9pm",
+      estimatedHours: "3-4 hours",
+      links: [
+        {
+          url: "https://kbf-capstones-24.devpost.com/",
+          label: "Devpost Link",
+        },
+      ],
+    },
+    {
+      title: "Closing Ceremony Slides",
+      description:
+        "Here is the slideshow we will go through at the Closing Cermoney. Please find your name and have your slides added by class on Thursday. You will have 3 minutes to present, and no live demos are allowed. If you include a video, please embed it within the slide.",
+      dueDate: "July 25th (before class)",
+      estimatedHours: "1.5 hours",
+      links: [
+        {
+          url: "https://docs.google.com/presentation/d/16W-Gexg3K7SZfzPwYWGZ2AD5ZEOoO-oihcSX_xGYoHE/edit?usp=sharing",
+          label: "Link to Slides",
+        },
+      ],
+    },
+    {
       title: "Resume Review Submission (Optional)",
       description:
         "If you want your resume included in the KBF talent pool, after your resume review, revise your resume according to your reviewer's suggestions. Then submit the revised version as a PDF here.",

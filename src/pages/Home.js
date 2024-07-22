@@ -11,10 +11,21 @@ import Footer from "../components/Footer";
 import Eligibility from "../components/Eligibility";
 import Fellows from "../components/Fellows";
 import ProgramOutline from "../components/ProgramOutline";
-import { ModalCloseButton, Link, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@chakra-ui/react";
-import { ArrowUpIcon } from '@chakra-ui/icons'
+import {
+  ModalCloseButton,
+  Link,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+} from "@chakra-ui/react";
+import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useColorMode } from "@chakra-ui/react";
-
+import Cohort1 from "../components/Cohort1";
+import KBFTeam from "../components/KBFTeam";
 
 function Home() {
   // const [isOpen, setIsOpen] = React.useState(false);
@@ -34,9 +45,10 @@ function Home() {
 
       <About />
       {/* <ThreeCircles /> */}
-      <Mentors id="mentors"/>
-      <Fellows id="fellows"/>
-
+      <Mentors id="mentors" />
+      <Cohort1 />
+      <Fellows id="fellows" />
+      <KBFTeam />
       <Team />
 
       <WindmillImage />
@@ -76,8 +88,28 @@ function ScrollToTop() {
   const colorMode = useColorMode();
 
   return (
-    <div style={{ position: "fixed", bottom: "20px", right: "20px", cursor: "pointer", zIndex: "9999" }} className="scroll-to-top" onClick={handleScrollToTop}>
-      <div style={{ backgroundColor: "black", borderRadius: "50%", width: "50px", height: "50px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div
+      style={{
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        cursor: "pointer",
+        zIndex: "9999",
+      }}
+      className="scroll-to-top"
+      onClick={handleScrollToTop}
+    >
+      <div
+        style={{
+          backgroundColor: "black",
+          borderRadius: "50%",
+          width: "50px",
+          height: "50px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <ArrowUpIcon />
       </div>
     </div>
