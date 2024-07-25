@@ -5,6 +5,23 @@ import Assignment from "./Assignment";
 const Assignments = () => {
   const assignments = [
     {
+      title: "Capstone Judging",
+      description:
+        "After reviewing your peers' submissions, please submit this form to vote for certain projects to be honored. You can vote for your own, if you feel like that's fair.",
+      dueDate: "July 26th @ 10am",
+      estimatedHours: "2 hours",
+      links: [
+        {
+          url: "https://kbf-capstones-24.devpost.com/project-gallery",
+          label: "Project Gallery",
+        },
+        {
+          url: "https://forms.gle/apaYhHmuvy1nSbLz5",
+          label: "Voting Form",
+        },
+      ],
+    },
+    {
       title: "Capstone Final Submission",
       description:
         "Here is the Devpost where you will submit your final Capstone project!",

@@ -52,7 +52,7 @@ const Team = () => {
     {
       headshot: micah_headshot,
       name: "Micah Borghese",
-      title: "Diector of Education",
+      title: "Director of Education",
       bio: "Micah is a senior in the Honors Program studying Computer Science and Mathematics. He is the President for the KU Blockchain Institute.",
       longBio:
         "Micah is a senior in the Honors Program studying Computer Science and Mathematics. He is the President for the KU Blockchain Institute.",
