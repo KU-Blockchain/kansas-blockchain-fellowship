@@ -21,19 +21,7 @@ const Assignments = () => {
         },
       ],
     },
-    {
-      title: "Capstone Final Submission",
-      description:
-        "Here is the Devpost where you will submit your final Capstone project!",
-      dueDate: "July 24th @ 9pm",
-      estimatedHours: "3-4 hours",
-      links: [
-        {
-          url: "https://kbf-capstones-24.devpost.com/",
-          label: "Devpost Link",
-        },
-      ],
-    },
+
     {
       title: "Closing Ceremony Slides",
       description:
@@ -44,6 +32,19 @@ const Assignments = () => {
         {
           url: "https://docs.google.com/presentation/d/16W-Gexg3K7SZfzPwYWGZ2AD5ZEOoO-oihcSX_xGYoHE/edit?usp=sharing",
           label: "Link to Slides",
+        },
+      ],
+    },
+    {
+      title: "Capstone Final Submission",
+      description:
+        "Here is the Devpost where you will submit your final Capstone project!",
+      dueDate: "July 24th @ 9pm",
+      estimatedHours: "3-4 hours",
+      links: [
+        {
+          url: "https://kbf-capstones-24.devpost.com/",
+          label: "Devpost Link",
         },
       ],
     },
