@@ -1,3 +1,22 @@
+# The Kansas Blockchain Fellowship
+
+## About the Program
+
+The Kansas Blockchain Fellowship is a seven-week experiential learning intensive, scholarship program, and talent incubator to prepare students in Kansas for careers in blockchain and web3. This program is designed to give exceptional students deep knowledge and experience around blockchain, digital assets, and web3 to prepare them for careers in the industry.
+
+The deployed version of this website can be found at [https://kansasblockchain.org](https://kansasblockchain.org).
+
+## A “Decentralized Canvas”
+
+Not only is this web app a website for the program, but it has also functioned as a learning management system (LMS) for our fellows. After signing into the website on a token-gated login page, fellows had access to recordings of the lectures, supplemental materials, and a directory of mentors. The fellows could also visit the [portal](https://github.com/KU-Blockchain/kbf-app) to view their quiz feedback.
+
+## Tools and Technologies Used
+
+- Built with [Next.js](https://nextjs.org)
+- [Heirloom](https://heirloom.io) for decentralized identifiers (DIDs)
+- [Chakra UI](https://v2.chakra-ui.com/) for visual components
+- [Pinata](https://pinata.cloud) for [IPFS](https://ipfs.tech/) file pinning
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
